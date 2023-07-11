@@ -1,4 +1,4 @@
-from scenario import REDIS
+from DazaiRobot import REDIS
 
 
 # AFK
