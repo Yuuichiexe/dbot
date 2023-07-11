@@ -44,6 +44,7 @@ if ENV:
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
     LOAD = os.environ.get("LOAD", "").split()
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    REDIS_URL = os.environ.get("REDIS_URL", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get(
         "START_IMG", "https://telegra.ph/file/40eb1ed850cdea274693e.jpg"
@@ -102,6 +103,7 @@ else:
     INFOPIC = Config.INFOPIC
     LOAD = Config.LOAD
     MONGO_DB_URI = Config.MONGO_DB_URI
+    REDIS_URL = Config.REDIS_URL
     NO_LOAD = Config.NO_LOAD
     START_IMG = Config.START_IMG
     STRICT_GBAN = Config.STRICT_GBAN
@@ -149,6 +151,23 @@ DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(6171176459)
 
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("[Scenario]: Connecting to redis")
+except BaseException:
+
+    raise Exception("[Scenario ERROR]: Redis Database Is Not Alive, Please Check Again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("[Scenario]: Connection to Redis Database Established Successfully!")
+    
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Dazai", API_ID, API_HASH)
