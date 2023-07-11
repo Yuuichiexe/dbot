@@ -71,12 +71,7 @@
          "description": "Telegraph link of the image which will be shown when bot is alive.",
          "required": true,
          "value": ""
-      },
-      "PM_START_IMG": {
-         "description": "Start img replyed with msg when u start the bot.",
-         "required": true,
-         "value": ""
-      },
+      },      
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Fallen Support than consider you made an enemy.",
          "required": true,
