@@ -68,7 +68,12 @@
          "value": "6171176459"
       },
       "START_IMG": {
-         "description": "Telegraph link of the image which will be shown at start command.",
+         "description": "Telegraph link of the image which will be shown when bot is alive.",
+         "required": true,
+         "value": ""
+      },
+      "PM_START_IMG": {
+         "description": "Start img replyed with msg when u start the bot.",
          "required": true,
          "value": ""
       },
