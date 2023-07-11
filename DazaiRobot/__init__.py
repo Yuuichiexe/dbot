@@ -49,6 +49,7 @@ if ENV:
     START_IMG = os.environ.get(
         "START_IMG", "https://telegra.ph/file/31f2989f6306e8bbf1aa9.jpg"
     )
+    PM_START_IMG = os.environ.get("PM_START_IMG", None)
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "DevilsHeavenMF")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
@@ -106,6 +107,7 @@ else:
     REDIS_URL = Config.REDIS_URL
     NO_LOAD = Config.NO_LOAD
     START_IMG = Config.START_IMG
+    PM_START_IMG = Config.PM_START_IMG
     STRICT_GBAN = Config.STRICT_GBAN
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
