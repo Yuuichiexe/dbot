@@ -136,7 +136,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} is with your girlfriend!\nLast seen: {} Ago.".format(fst_name, since_afk)
+            res = "{} is away from keyboard!\nLast seen: {} Ago.".format(fst_name, since_afk)
         else:
             res = "{} is afk!\nReason: {}\nLast seen: {} Ago.".format(fst_name, reason, since_afk)
 
