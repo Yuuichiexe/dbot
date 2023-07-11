@@ -15,7 +15,7 @@ def reverse(update: Update, context: CallbackContext):
         update.effective_message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ.")
 
     elif update.effective_message.reply_to_message.photo:
-        msg = update.effective_message.reply_text("➠ sᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ǫᴜᴇʀʏ...")
+        msg = update.effective_message.reply_text("𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝗒𝗈𝗎𝗋 𝗊𝗎𝖾𝗋𝗒...")
 
         photo_id = update.effective_message.reply_to_message.photo[-1].file_id
         get_path = requests.post(
@@ -33,7 +33,7 @@ def reverse(update: Update, context: CallbackContext):
                 f"[{result['data']['resultText']}]({result['data']['similarUrl']})",
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("ʟɪɴᴋ", url="https://t.me/The_Apexx")]]
+                    [[InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/exe_support")]]
                 ),
             )
         else:
