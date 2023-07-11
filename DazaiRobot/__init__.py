@@ -157,16 +157,16 @@ try:
 
     REDIS.ping()
 
-    LOGGER.info("[Scenario]: Connecting to redis")
+    LOGGER.info("[Dazai]: Connecting to redis")
 except BaseException:
 
-    raise Exception("[Scenario ERROR]: Redis Database Is Not Alive, Please Check Again.")
+    raise Exception("[Dazai ERROR]: Redis Database Is Not Alive, Please Check Again.")
 
 finally:
 
    REDIS.ping()
 
-   LOGGER.info("[Scenario]: Connection to Redis Database Established Successfully!")
+   LOGGER.info("[Dazai]: Connection to Redis Database Established Successfully!")
     
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
