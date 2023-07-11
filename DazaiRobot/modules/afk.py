@@ -9,14 +9,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from scenario.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from scenario import REDIS
-from scenario.modules.users import get_user_id
+from DazaiRobot import dispatcher
+from DazaiRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from DazaiRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from DazaiRobot import REDIS
+from DazaiRobot.modules.users import get_user_id
 
-from scenario.modules.helper_funcs.alternate import send_message
-from scenario.modules.helper_funcs.readable_time import get_readable_time
+from DazaiRobot.modules.helper_funcs.alternate import send_message
+from DazaiRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -136,7 +136,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} is Dead!\nLast Liveliness: {} Ago.".format(fst_name, since_afk)
+            res = "{} is with your girlfriend!\nLast seen: {} Ago.".format(fst_name, since_afk)
         else:
             res = "{} is afk!\nReason: {}\nLast seen: {} Ago.".format(fst_name, reason, since_afk)
 
