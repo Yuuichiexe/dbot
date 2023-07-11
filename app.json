@@ -53,6 +53,10 @@
          "required": true,
          "value": ""
       },
+      "REDIS_URL": {
+        "description": "Redis db url get it from: redis.com",
+        "required": true
+      },     
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": true,
