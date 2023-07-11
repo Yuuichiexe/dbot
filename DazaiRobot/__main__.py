@@ -33,7 +33,6 @@ from DazaiRobot import (
     LOGGER,
     OWNER_ID,
     START_IMG,
-    PM_START_IMG,
     SUPPORT_CHAT,
     TOKEN,
     StartTime,
@@ -80,7 +79,7 @@ PM_START_TEXT = """
 *ᴋᴏɴɴɪᴄʜɪᴡᴀ* {}!💌
 *ᴛʜɪs ɪs* ᴅᴀ𝓩ᴀɪ 
 ✦⋆⋇────────────────⋇⋆✦
-⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ.
+⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/a7844c15b6f15b76d663b.jpg)
 
 ✦⋆⋇────────────────⋇⋆✦
 ⦿ *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ.*
@@ -222,7 +221,7 @@ def start(update: Update, context: CallbackContext):
             time.sleep(0.2)
             lol.delete()
             
-            update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+            update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -436,7 +435,7 @@ def Dazai_about_callback(update: Update, context: CallbackContext):
     elif query.data == "dazai_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
@@ -474,7 +473,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     elif query.data == "source_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
