@@ -79,7 +79,7 @@ PM_START_TEXT = """
 *ᴋᴏɴɴɪᴄʜɪᴡᴀ* {}!💌
 *ᴛʜɪs ɪs* ᴅᴀ𝓩ᴀɪ 
 ✦⋆⋇────────────────⋇⋆✦
-⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/a7844c15b6f15b76d663b.jpg)
+⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/a62c709208923294a5502.jpg)
 
 ✦⋆⋇────────────────⋇⋆✦
 ⦿ *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ.*
@@ -93,8 +93,8 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ 🫧", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ ♻️", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="🫧 ᴅᴇᴠ 🫧", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="♻️ sᴜᴩᴩᴏʀᴛ ♻️", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(text="🍁 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🍁", callback_data="help_back"),
