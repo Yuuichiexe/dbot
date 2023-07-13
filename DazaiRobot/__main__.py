@@ -1101,7 +1101,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.send_photo(
-                chat_id=f@SUPPORT CHAT)",
+                chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
 ㅤ{BOT_NAME} ɪs ʙᴀᴄᴋ ᴛᴏ ᴡᴏʀᴋ!
