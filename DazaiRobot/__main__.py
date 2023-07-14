@@ -82,7 +82,7 @@ PM_START_TEXT = """
 *ᴋᴏɴɴɪᴄʜɪᴡᴀ* {}, [💌]({})
 *ᴛʜɪs ɪs* ᴅᴀ𝓩ᴀɪ 
 ✦⋆⋇────────────────⋇⋆✦
-⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/625f9ebeb21d04427adc6.jpg)
+⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ.
 
 ✦⋆⋇────────────────⋇⋆✦
 ⦿ *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ.*
@@ -707,16 +707,9 @@ def main():
         try:
             dispatcher.bot.sendAnimation(
                 f"@{SUPPORT_CHAT}",
-                animation="https://te.legra.ph/file/01811f6156df11a66b947.mp4",
+                animation="https://te.legra.ph/file/0479c847b0bc301f663c1.mp4",
                 caption=f"""
 ㅤ{BOT_NAME} ɪs ʙᴀᴄᴋ ᴛᴏ ᴡᴏʀᴋ!
-
-✧•────────────────•✧
-ㅤ❆ ᴘʏᴛʜᴏɴ : `{y()}`
-ㅤ❆ ʟɪʙʀᴀʀʏ : `{telever}`
-ㅤ❆ ᴛᴇʟᴇᴛʜᴏɴ : `{tlhver}`
-ㅤ❆ ᴩʏʀᴏɢʀᴀᴍ : `{pyrover}`
-✧•────────────────•✧
 """,
                 parse_mode=ParseMode.MARKDOWN,
             )
