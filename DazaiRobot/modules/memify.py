@@ -16,7 +16,7 @@ async def handler(event):
 
     if not event.reply_to_msg_id:
 
-        await event.reply("Provide Some Text To Draw!")
+        await event.reply("ᴘʀᴏᴠɪᴅᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴅʀᴀᴡ!")
 
         return
 
@@ -24,13 +24,13 @@ async def handler(event):
 
     if not reply_message.media:
 
-        await event.reply("```Reply to a image/sticker.```")
+        await event.reply("```ʀᴇᴘʟʏ ᴛᴏ ᴀ ɪᴍᴀɢᴇ/sᴛɪᴄᴋᴇʀ.```")
 
         return
 
     file = await bot.download_media(reply_message)
 
-    msg = await event.reply("```Memifying this image! ✊🏻 ```")
+    msg = await event.reply("```𝖬𝖾𝗆𝗂𝖿𝗒𝗂𝗇𝗀 𝗍𝗁𝗂𝗌 𝗂𝗆𝖺𝗀𝖾!..⚡ ```")
 
 
     text = str(event.pattern_match.group(1)).strip()
