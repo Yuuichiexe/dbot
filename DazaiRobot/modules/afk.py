@@ -58,21 +58,14 @@ def no_longer_afk(update, context):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Is wasting his time in the chat!",
-                "The Dead {} Came Back From His Grave!",
-                "Welcome back {}! I hope you bought pizza",
-                "Good to hear from you again {}",
-                "{} Good job waking up now get ready for your classes!",
-                "Hey {}! Why weren't you online for such a long time?",
-                "{} why did you came back?",
-                "{} Is now back online!",
-                "OwO, Welcome back {}",
-                "Welcome to hell again {}",
-                "Whats poppin {}?",
+                "The Dead {} Came Back From His Grave! Time Taken: {}",
+                "Hey {} Darling, Welcome Back! We Were Apart For {}",
+                "{} Came Back After Masturbating! Time Taken: {}",
+                "OwO, Welcome Back {}! You Were Missing Since {}",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
-                chosen_option.format(firstname),
+                chosen_option.format(firstname, end_afk_time),
             )
         except BaseException:
             pass
