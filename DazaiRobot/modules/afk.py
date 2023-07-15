@@ -37,7 +37,7 @@ def afk(update, context):
     fname = update.effective_user.first_name
     try:
         update.effective_message.reply_text(
-            "{} is now Away!".format(fname))
+            "{} ɪs ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
     except BadRequest:
         pass
 
@@ -58,10 +58,10 @@ def no_longer_afk(update, context):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "The Dead {} Came Back From His Grave! Time Taken: {}",
-                "Hey {} Darling, Welcome Back! We Were Apart For {}",
-                "{} Came Back After Masturbating! Time Taken: {}",
-                "OwO, Welcome Back {}! You Were Missing Since {}",
+                "ᴛʜᴇ ᴅᴇᴀᴅ {} ᴄᴀᴍᴇ ʙᴀᴄᴋ ғʀᴏᴍ ʜɪs ɢʀᴀᴠᴇ! ᴛɪᴍᴇ ᴛᴀᴋᴇɴ: {}",
+                "ʜᴇʏ {} ᴅᴀʀʟɪɴɢ, ᴡᴇʟᴄᴏᴍᴇ ʙᴀᴄᴋ! ᴡᴇ ᴡᴇʀᴇ ᴀᴘᴀʀᴛ ғᴏʀ {}",
+                "{} ᴄᴀᴍᴇ ʙᴀᴄᴋ ғʀᴏᴍ ᴡᴏʀᴋ! ᴛɪᴍᴇ ᴛᴀᴋᴇɴ: {}",
+                "OwO, ᴡᴇʟᴄᴏᴍᴇ ʙᴀᴄᴋ {}! ʏᴏᴜ ᴡᴇʀᴇ ᴍɪssɪɴɢ sɪɴᴄᴇ {}",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
@@ -129,9 +129,9 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} is away from keyboard!\nLast seen: {} Ago.".format(fst_name, since_afk)
+            res = "{} ɪs ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ!\nʟᴀsᴛ sᴇᴇɴ: {} ᴀɢᴏ.".format(fst_name, since_afk)
         else:
-            res = "{} is afk!\nReason: {}\nLast seen: {} Ago.".format(fst_name, reason, since_afk)
+            res = "{} ɪs ᴀғᴋ!\nʀᴇᴀsᴏɴ: {}\nʟᴀsᴛ sᴇᴇɴ: {} ᴀɢᴏ.".format(fst_name, reason, since_afk)
 
         update.effective_message.reply_text(res)
 
@@ -145,7 +145,7 @@ def __user_info__(user_id):
         text += f"\nLast Seen: {since_afk} Ago."
        
     else:
-        text = "This user currently isn't afk (not away from keyboard)."
+        text = "ᴛʜɪs ᴜsᴇʀ ᴄᴜʀʀᴇɴᴛʟʏ ɪsɴ'ᴛ ᴀғᴋ (ɴᴏᴛ ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ)."
     return text
 
 def __stats__():
