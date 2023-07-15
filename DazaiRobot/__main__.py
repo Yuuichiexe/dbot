@@ -73,6 +73,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+    
 PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
@@ -404,7 +405,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="dazai_back"),
+                        InlineKeyboardButton(text="BACK", callback_data="dazai_back"),
                     ],
                 ]
             ),
