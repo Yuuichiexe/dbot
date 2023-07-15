@@ -110,11 +110,11 @@ def get_cbs_data(query, page, user_id):
     buttons = []
     if has_prev_page:
         buttons.append(
-            InlineKeyboardButton(text="⟨", callback_data=f"cbs_{page - 1}_{user_id}")
+            InlineKeyboardButton(text="⋘", callback_data=f"cbs_{page - 1}_{user_id}")
         )
     if has_next_page:
         buttons.append(
-            InlineKeyboardButton(text="⟩", callback_data=f"cbs_{page + 1}_{user_id}")
+            InlineKeyboardButton(text="⋙", callback_data=f"cbs_{page + 1}_{user_id}")
         )
     buttons = InlineKeyboardMarkup([buttons]) if buttons else None
     text = f"sᴛɪᴄᴋᴇʀs ғᴏʀ <code>{escape(query)}</code>:\nᴘᴀɢᴇ: {page}"
@@ -293,7 +293,7 @@ def kang(update, context):
                 )
                 adding_process.edit_text(
                     f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                    f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                    f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -338,7 +338,7 @@ def kang(update, context):
                     )
                     adding_process.edit_text(
                         f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                        f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                        f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
@@ -358,7 +358,7 @@ def kang(update, context):
                     )
                     msg.reply_text(
                         f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                        f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                        f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
@@ -404,7 +404,7 @@ def kang(update, context):
                 )
                 adding_process.edit_text(
                     f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                    f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                    f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -435,7 +435,7 @@ def kang(update, context):
                     )
                     adding_process.edit_text(
                         f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                        f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                        f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
@@ -481,7 +481,7 @@ def kang(update, context):
                 )
                 adding_process.edit_text(
                     f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                    f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                    f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -565,7 +565,7 @@ def kang(update, context):
             )
             adding_process.edit_text(
                 f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                 reply_markup=edited_keyboard,
                 parse_mode=ParseMode.HTML,
             )
@@ -605,7 +605,7 @@ def kang(update, context):
                 )
                 adding_process.edit_text(
                     f"<b>ʏᴏᴜʀ sᴛɪᴄᴋᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ!</b>"
-                    f"\nᴇᴍᴏᴊɪ ɪs ➼ : {sticker_emoji}",
+                    f"\nᴇᴍᴏᴊɪ ɪs : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -819,7 +819,7 @@ def video(update: Update, context: CallbackContext):
 Credit = "Anonymous-068"
 
 
-@asux(pattern="^/smaksjsb ?(.*)")
+@asux(pattern="^/nnnnnnnnnnn ?(.*)")
 async def handler(event):
     if event.fwd_from:
         return
@@ -871,7 +871,7 @@ async def drawText(image_path, text):
         fnt = "ariel.ttf"
 
     else:
-        fnt = "./Exon/modules/resources/asu.ttf"
+        fnt = "./DazaiRobot/modules/resources/asu.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
