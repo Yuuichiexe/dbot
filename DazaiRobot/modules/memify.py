@@ -62,7 +62,7 @@ async def drawText(image_path, text):
 
     else:
 
-        fnt = "./DazaiRobot/resources/default.ttf"
+        fnt = "./DazaiRobot/resources/LostAgesPersonalUseRegular-Ea0nl.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
