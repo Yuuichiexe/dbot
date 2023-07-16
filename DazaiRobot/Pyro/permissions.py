@@ -6,8 +6,8 @@ from pyrogram import enums
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
-from FallenRobot import pbot as app
-from FallenRobot import DRAGONS as SUDO
+from DazaiRobot import pbot as app
+from DazaiRobot import DRAGONS as SUDO
 
 
 async def member_permissions(chat_id: int, user_id: int):
