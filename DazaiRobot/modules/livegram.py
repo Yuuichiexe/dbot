@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from FallenRobot import OWNER_ID
-from FallenRobot import pbot as bot
+from DazaiRobot import OWNER_ID
+from DazaiRobot import pbot as bot
 
 
 @bot.on_message(filters.private & filters.incoming)
