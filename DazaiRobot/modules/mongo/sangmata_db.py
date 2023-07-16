@@ -1,4 +1,4 @@
-from FallenRobot.utils.mongo import db
+from DazaiRobot.utils.mongo import db
 
 matadb = db.sangmata
 history_db = db.name_history
