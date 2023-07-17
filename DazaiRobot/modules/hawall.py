@@ -145,17 +145,17 @@ __help__ = """
 ❔ **What is Wish:**
 You have any kind of wish? Use `/wish` command to this bot to how possible to your wish!
 Example:
-❍ /wish I want to be a class topper
+➛ /wish I want to be a class topper
 
 ❔ **What is This (howall):**
 In this Howell show you possibltly!
 Example:
-❍ /horny : reply to someone or self it well show you how horny
-❍ /cute: reply to someone or self it well show you how cute
-❍ /gay: reply to someone or self it well show you how gayness
-❍ /lezbian: reply to someone or self it well show you how Lezbian
-❍ /boobs: reply to someone or self it well show you how boob's size
-❍ /cock: reply to someone or self it well show you how cock's size
+➛ /horny : reply to someone or self it well show you how horny
+➛ /cute: reply to someone or self it well show you how cute
+➛ /gay: reply to someone or self it well show you how gayness
+➛ /lezbian: reply to someone or self it well show you how Lezbian
+➛ /boobs: reply to someone or self it well show you how boob's size
+➛ /cock: reply to someone or self it well show you how cock's size
 """
 
 __mod_name__ = "Howall"
