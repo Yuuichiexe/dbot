@@ -1,8 +1,8 @@
 
 import random, requests, time
-from YorForger import telethn as asst, pgram as bot
+from DazaiRobot import telethn as asst, pbot as bot
 from telethon import Button, events
-from YorForger.events import register
+from DazaiRobot.events import register
 from pyrogram import filters
 from pyrogram.types import *
 
