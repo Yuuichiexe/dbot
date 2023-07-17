@@ -53,7 +53,7 @@ __help__ = """
 
  """
 
-__mod_name__ = "Image"
+__mod_name__ = "ɪᴍᴀɢᴇ/sᴋᴇᴛᴄʜ"
 
 SKETCH_HANDLER = DisableAbleCommandHandler("sketch", sketch, run_async=True)
 dispatcher.add_handler(SKETCH_HANDLER)
