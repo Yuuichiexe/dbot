@@ -36,8 +36,8 @@ async def _(event):
 __help__ = """
 I can find weather of all cities
 
-❍ /weather <city>*:* Advanced weather module, usage same as /weather
- ❍ /weather moon*:* Get the current status of moon
+➛ /weather <city>*:* Advanced weather module, usage same as /weather
+ ➛ /weather moon*:* Get the current status of moon
 """
 
 __mod_name__ = "Wᴇᴀᴛʜᴇʀ"
