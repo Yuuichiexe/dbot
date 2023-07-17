@@ -137,7 +137,7 @@ async def set_mataa(_, m):
 
 __mod_name__ = "ɪᴍᴘᴏsᴛᴇʀ ᴅᴇᴛᴇᴄᴛɪᴏɴ"
 __help__ = """
-*• /detectimposter:* Use this command to track name and username changes in the group. If a user changes their name and username, the bot will send a message showing any related changes.
+*➛ /detectimposter:* Use this command to track name and username changes in the group. If a user changes their name and username, the bot will send a message showing any related changes.
 
-*• /history:* Reply to a user with this command to get their previous name change history.
+*➛ /history:* Reply to a user with this command to get their previous name change history.
 """
