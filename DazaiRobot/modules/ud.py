@@ -24,7 +24,7 @@ UD_HANDLER = DisableAbleCommandHandler(["ud"], ud, run_async=True)
 dispatcher.add_handler(UD_HANDLER)
 
 __help__ = """
-» /ud (text) *:* Searchs the given text on Urban Dictionary and sends you the information.
+➛ /ud (text) *:* Searchs the given text on Urban Dictionary and sends you the information.
 """
 __mod_name__ = "Uʀʙᴀɴ D"
 
