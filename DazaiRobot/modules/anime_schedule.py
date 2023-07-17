@@ -28,5 +28,5 @@ def schedule(_, message):
 __mod_name__ = "sᴄʜᴇᴅᴜʟᴇ"
 
 __help__ = """
- ❍ `/latest`: to see latest anime episode
+➛ `/latest`: to see latest anime episode
 """
