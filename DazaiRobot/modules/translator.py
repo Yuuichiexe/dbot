@@ -46,10 +46,10 @@ def totranslate(update: Update, context: CallbackContext) -> None:
 
 
 __help__ = """
- ❍ /tr or /tl (language code) as reply to a long message
+ ➛ /tr or /tl (language code) as reply to a long message
 *Example:* 
- ❍ /tr en*:* translates something to english
- ❍ /tr hi-en*:* translates hindi to english
+ ➛ /tr en*:* translates something to english
+ ➛ /tr hi-en*:* translates hindi to english
 
 [ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs](https://te.legra.ph/LANGUAGE-CODES-05-23-2)
 """
