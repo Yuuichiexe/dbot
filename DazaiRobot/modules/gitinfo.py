@@ -50,5 +50,5 @@ __mod_name__ = "Gɪᴛʜᴜʙ"
 __help__ = """
 Provides you information about a github profile
 
- ❍ /github <username> *:* Get information about a GitHub user.
+ ➛ /github <username> *:* Get information about a GitHub user.
 """
