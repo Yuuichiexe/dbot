@@ -1,6 +1,6 @@
-from ShirokoRobot import *
-from ShirokoRobot import LOGGER
-from ShirokoRobot.events import register
+from DazaiRobot import *
+from DazaiRobot import LOGGER
+from DazaiRobot.events import register
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -19,9 +19,9 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-sudo = 2131857711
-BOT_ID = 1241223850
-CMD_HELP = '/ !'
+sudo = 6171176459
+BOT_ID = 6299213020
+CMD_HELP = '/ ! .'
 
 
 # ================================================
