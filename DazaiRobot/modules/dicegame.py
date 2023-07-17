@@ -40,12 +40,12 @@ async def basket(bot, message):
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
 __help__ = """
  Play Game With Emojis:
-/dice - Dice 🎲
-/dart - Dart 🎯
-/basket - Basket Ball 🏀
-/ball - Bowling Ball 🎳
-/football - Football ⚽
-/jackpot - Spin slot machine 🎰
+➛ /dice - Dice 🎲
+➛ /dart - Dart 🎯
+➛ /basket - Basket Ball 🏀
+➛ /ball - Bowling Ball 🎳
+➛ /football - Football ⚽
+➛ /jackpot - Spin slot machine 🎰
  """
 
 __mod_name__ = "ᴅɪᴄᴇ"
