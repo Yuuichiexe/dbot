@@ -145,11 +145,11 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- ‣ `/rules`*:* get the rules for this chat.
- ‣ `/rules here`*:* get the rules for this chat but send it in the chat.
+ ➛ `/rules`*:* get the rules for this chat.
+ ➛ `/rules here`*:* get the rules for this chat but send it in the chat.
 *Admins only:*
- ‣ `/setrules <your rules here>`*:* set the rules for this chat.
- ‣ `/clearrules`*:* clear the rules for this chat.
+ ➛ `/setrules <your rules here>`*:* set the rules for this chat.
+ ➛ `/clearrules`*:* clear the rules for this chat.
 """
 
 __mod_name__ = "Rᴜʟᴇs"
