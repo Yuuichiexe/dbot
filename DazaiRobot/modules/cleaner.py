@@ -209,10 +209,10 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
 __help__ = """
 *ʙʟᴜᴇ ᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ* ʀᴇᴍᴏᴠᴇᴅ ᴀɴʏ ᴍᴀᴅᴇ ᴜᴘ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴘᴇᴏᴘʟᴇ sᴇɴᴅ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ
 .
- ❍ /cleanblue <on/off/yes/no>*:* clean commands after sending
- ❍ /ignoreblue <word>*:* prevent auto cleaning of the command
- ❍ /unignoreblue <word>*:* remove prevent auto cleaning of the command
- ❍ /listblue*:* list currently whitelisted commands
+ ➛ /cleanblue <on/off/yes/no>*:* clean commands after sending
+ ➛ /ignoreblue <word>*:* prevent auto cleaning of the command
+ ➛ /unignoreblue <word>*:* remove prevent auto cleaning of the command
+ ➛ /listblue*:* list currently whitelisted commands
 """
 
 SET_CLEAN_BLUE_TEXT_HANDLER = CommandHandler(
