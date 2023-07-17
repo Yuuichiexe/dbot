@@ -72,8 +72,8 @@ async def delete_messages(event):
 
 
 __help__ = """
- ❍ /del*:* deletes the message you replied to
- ❍ /purge*:* deletes all messages between this and the replied to message.
+ ➛ /del*:* deletes the message you replied to
+ ➛ /purge*:* deletes all messages between this and the replied to message.
 """
 
 PURGE_HANDLER = purge_messages, events.NewMessage(pattern="^[!/]purge$")
