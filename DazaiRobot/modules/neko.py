@@ -6,7 +6,7 @@ from PIL import Image
 from telegram import Chat
 from telegram.ext import CommandHandler
 
-from DazaiRobot import dispatcher
+from YamatoRobot import dispatcher
 
 
 def is_user_in_chat(chat: Chat, user_id: int) -> bool:
@@ -242,10 +242,10 @@ def holo(update, context):
 #     msg.reply_photo(nekos.img(target))
 
 
-# def pussygif(update, context):
-#    msg = update.effective_message
-#    target = "pussy"
-#    msg.reply_video(nekos.img(target))
+def pussygif(update, context):
+    msg = update.effective_message
+    target = "pussy"
+    msg.reply_video(nekos.img(target))
 
 
 def tits(update, context):
@@ -419,6 +419,7 @@ AVATAR_HANDLER = CommandHandler("avatar", avatar, run_async=True)
 EROFEET_HANDLER = CommandHandler("erofeet", erofeet, run_async=True)
 HOLO_HANDLER = CommandHandler("holo", holo, run_async=True)
 TITS_HANDLER = CommandHandler("tits", tits, run_async=True)
+PUSSYGIF_HANDLER = CommandHandler("pussygif", pussygif, run_async=True)
 HOLOERO_HANDLER = CommandHandler("holoero", holoero, run_async=True)
 PUSSY_HANDLER = CommandHandler("pussy", pussy, run_async=True)
 HENTAIGIF_HANDLER = CommandHandler("hentaigif", hentaigif, run_async=True)
@@ -471,7 +472,9 @@ dispatcher.add_handler(AVATAR_HANDLER)
 dispatcher.add_handler(EROFEET_HANDLER)
 dispatcher.add_handler(HOLO_HANDLER)
 dispatcher.add_handler(TITS_HANDLER)
+dispatcher.add_handler(PUSSYGIF_HANDLER)
 dispatcher.add_handler(HOLOERO_HANDLER)
+dispatcher.add_handler(PUSSY_HANDLER)
 dispatcher.add_handler(HENTAIGIF_HANDLER)
 dispatcher.add_handler(CLASSIC_HANDLER)
 dispatcher.add_handler(KUNI_HANDLER)
