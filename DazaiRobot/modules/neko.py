@@ -6,7 +6,7 @@ from PIL import Image
 from telegram import Chat
 from telegram.ext import CommandHandler
 
-from YamatoRobot import dispatcher
+from DazaiRobot import dispatcher
 
 
 def is_user_in_chat(chat: Chat, user_id: int) -> bool:
@@ -242,10 +242,10 @@ def holo(update, context):
 #     msg.reply_photo(nekos.img(target))
 
 
-def pussygif(update, context):
-    msg = update.effective_message
-    target = "pussy"
-    msg.reply_video(nekos.img(target))
+# def pussygif(update, context):
+#    msg = update.effective_message
+#    target = "pussy"
+#    msg.reply_video(nekos.img(target))
 
 
 def tits(update, context):
