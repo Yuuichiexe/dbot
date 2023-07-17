@@ -88,9 +88,9 @@ def resize_image(image):
 
 
 __help__ = """
- ❍ /tgm :Get Telegraph Link Of Replied Media
- ❍ /tgt :Get Telegraph Link of Replied Text
- ❍ /tgt [custom name]: Get telegraph link of replied text with custom name.
+ ➛ /tgm :Get Telegraph Link Of Replied Media
+ ➛ /tgt :Get Telegraph Link of Replied Text
+ ➛ /tgt [custom name]: Get telegraph link of replied text with custom name.
 """
 
 __mod_name__ = "T-Gʀᴀᴘʜ"
