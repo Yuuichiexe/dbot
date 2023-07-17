@@ -192,4 +192,4 @@ async def drawText(image_path, text):
 
 __mod_name__ = "Mᴍғ"
 __help__ = """ 
-⫸ /mmf <ᴛᴇxᴛ> ◉ ᴛᴏ ᴍᴇᴍɪғʏ """
+➛ /mmf <ᴛᴇxᴛ> ◉ ᴛᴏ ᴍᴇᴍɪғʏ """
