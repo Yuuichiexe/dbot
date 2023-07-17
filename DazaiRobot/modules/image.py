@@ -1,12 +1,12 @@
 import os
 import cv2
 from io import BytesIO
-from Yone import dispatcher
-from Yone.Plugins.disable import DisableAbleCommandHandler
+from DazaiRobot import dispatcher
+from DazaiRobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext, run_async
 
-# Copyright - All Copyrights of this file is belong to kushal
+# Credits: All credit goes to kushal
 
 def sketch(update: Update, context: CallbackContext):
     bot = context.bot
