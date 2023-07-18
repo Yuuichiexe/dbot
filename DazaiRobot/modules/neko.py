@@ -2,8 +2,8 @@ import nekos
 import requests
 from telegram.ext import run_async
 
-from Madara import dispatcher
-from Madara.modules.disable import DisableAbleCommandHandler
+from DazaiRobot import dispatcher
+from DazaiRobot.modules.disable import DisableAbleCommandHandler
 
 url_sfw = "https://api.waifu.pics/sfw/"
 
