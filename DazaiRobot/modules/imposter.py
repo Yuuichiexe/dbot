@@ -24,27 +24,27 @@ async def cek_mataa(_, m):
         old_user = await app.get_chat_member(m.chat.id, m.from_user.id)
         if username != m.from_user.username or first_name != m.from_user.first_name or last_name != m.from_user.last_name:
             if username != m.from_user.username:
-                log_message = f"🚨 <b>Imposter Username Change Detected</b>\n\n"
+                log_message = f"🚨 <b>ɪᴍᴘᴏsᴛᴇʀ ᴜsᴇʀɴᴀᴍᴇ ᴄʜᴀɴɢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ</b>\n\n"
                 log_message += f"Chat: {m.chat.title}\n"
                 if m.chat.username:
-                    log_message += f"<b>Chat Username:</b> @{m.chat.username}\n"
-                log_message += f"<b>User:</b> {m.from_user.mention}\n"
-                log_message += f"<b>User ID:</b> <code>{m.from_user.id}</code>\n"
-                log_message += f"<b>Previous Username:</b> @{username}\n"
-                log_message += f"<b>New Username:</b> @{m.from_user.username}"
+                    log_message += f"<b>ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ:</b> @{m.chat.username}\n"
+                log_message += f"<b>ᴜsᴇʀ:</b> {m.from_user.mention}\n"
+                log_message += f"<b>ᴜsᴇʀ ɪᴅ:</b> <code>{m.from_user.id}</code>\n"
+                log_message += f"<b>ᴘʀᴇᴠɪᴏᴜs ᴜsᴇʀɴᴀᴍᴇ:</b> @{username}\n"
+                log_message += f"<b>ɴᴇᴡ ᴜsᴇʀɴᴀᴍᴇ:</b> @{m.from_user.username}"
                 await app.send_message(LOG_CHANNEL_ID, log_message)
             if first_name != m.from_user.first_name or last_name != m.from_user.last_name:
-                log_message = f"🚨 <b>Imposter Name Change Detected</b>\n\n"
+                log_message = f"🚨 <b>ɪᴍᴘᴏsᴛᴇʀ ɴᴀᴍᴇ ᴄʜᴀɴɢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ</b>\n\n"
                 log_message += f"Chat: {m.chat.title}\n"
                 if m.chat.username:
-                    log_message += f"<b>Chat Username:</b> @{m.chat.username}\n"
-                log_message += f"<b>User:</b> {m.from_user.mention}\n"
-                log_message += f"<b>User ID:</b> <code>{m.from_user.id}</code>\n"
-                log_message += f"<b>Previous Name:</b> {first_name} {last_name}\n"
-                log_message += f"<b>New Name:</b> {m.from_user.first_name} {m.from_user.last_name}"
+                    log_message += f"<b>ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ:</b> @{m.chat.username}\n"
+                log_message += f"<b>ᴜsᴇʀ:</b> {m.from_user.mention}\n"
+                log_message += f"<b>ᴜsᴇʀ ɪᴅ:</b> <code>{m.from_user.id}</code>\n"
+                log_message += f"<b>ᴘʀᴇᴠɪᴏᴜs ɴᴀᴍᴇ:</b> {first_name} {last_name}\n"
+                log_message += f"<b>ɴᴇᴡ ɴᴀᴍᴇ:</b> {m.from_user.first_name} {m.from_user.last_name}"
                 await app.send_message(LOG_CHANNEL_ID, log_message)
 
-            msg += "👀 <b>Imposter Detected</b>\n\n"
+            msg += "🛑 <b>ɪᴍᴘᴏsᴛᴇʀ ᴅᴇᴛᴇᴄᴛᴇᴅ</b>\n\n"
 
         if username != m.from_user.username:
             msg += f"❇️ {m.from_user.mention} [<code>{m.from_user.id}</code>] changed username from @{username} to @{m.from_user.username}.\n"
@@ -52,10 +52,10 @@ async def cek_mataa(_, m):
         if first_name != m.from_user.first_name or last_name != m.from_user.last_name:
             name_change = False
             if first_name != m.from_user.first_name:
-                msg += f"❇️ {m.from_user.mention} [<code>{m.from_user.id}</code>] changed first Name from {first_name} to {m.from_user.first_name}.\n"
+                msg += f"❇️ {m.from_user.mention} [<code>{m.from_user.id}</code>] ᴄʜᴀɴɢᴇᴅ ғɪʀsᴛ ɴᴀᴍᴇ ғʀᴏᴍ {first_name} ᴛᴏ {m.from_user.first_name}.\n"
                 name_change = True
             if last_name != m.from_user.last_name:
-                msg += f"❇️ {m.from_user.mention} [<code>{m.from_user.id}</code>] changed last name from {last_name} to {m.from_user.last_name}.\n"
+                msg += f"❇️ {m.from_user.mention} [<code>{m.from_user.id}</code>] ᴄʜᴀɴɢᴇᴅ ғɪʀsᴛ ɴᴀᴍᴇ ғʀᴏᴍ {last_name} ᴛᴏ {m.from_user.last_name}.\n"
                 name_change = True
             if name_change:
                 await add_userdata(m.from_user.id, m.from_user.username, m.from_user.first_name, m.from_user.last_name)
@@ -70,7 +70,7 @@ async def search_history(_, m):
             user_id = m.reply_to_message.from_user.id
             username = m.reply_to_message.from_user.username
         else:
-            return await kirimPesan(m, f"Please provide a user ID, username, or reply to a message to search the history.")
+            return await kirimPesan(m, f"ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴜsᴇʀ ɪᴅ, ᴜsᴇʀɴᴀᴍᴇ, ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇᴀʀᴄʜ ᴛʜᴇ ʜɪsᴛᴏʀʏ.")
     else:
         query = m.command[1].strip()
         user_id = None
@@ -90,7 +90,7 @@ async def search_history(_, m):
     if user_id is not None:
         if await cek_userdata(user_id):
             username, first_name, last_name = await get_userdata(user_id)
-            history_msg = "<b>🔰 Name History:</b>\n\n"
+            history_msg = "<b>🛡️ ɴᴀᴍᴇ ʜɪsᴛᴏʀʏ:</b>\n\n"
             history_msg += f"<code>👤 {user_id}</code>\n\n"
 
             name_history = await history_db.find({"user_id": user_id}).sort("_id", -1).to_list(None)
