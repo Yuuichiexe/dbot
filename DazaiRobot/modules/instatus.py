@@ -1,7 +1,7 @@
 import asyncio
 from datetime import datetime
 from pyrogram import enums , filters 
-from TeleBot import pgram
+from DazaiRobot import pbot as pgram
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 COMMANDERS = [enums.ChatMemberStatus.ADMINISTRATOR,enums.ChatMemberStatus.OWNER]
 
