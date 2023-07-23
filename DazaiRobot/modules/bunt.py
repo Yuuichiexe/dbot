@@ -15,7 +15,7 @@ from pyrogram.types import (InlineKeyboardMarkup, InlineKeyboardButton, Message)
 import httpx
 
 # Replace TGN to your actual telegram bot module and import pyrogram client from it.
-from  TGN import pbot
+from  DazaiRobot import pbot
 
 API_URL = 'https://sasta.tk/bounty'
 
@@ -28,7 +28,7 @@ class STRINGS:
     BOUNTY_RESULT = '''
 <b>• Here is your Bounty!</b>
 
-<b>UPDATES:</b> @FANTASTIC_UPDATES
+<b>UPDATES:</b> @daxai_updates
     '''
 
 COMMANDS = ['bounty', 'wanted']
