@@ -10,7 +10,7 @@ from DazaiRobot.Pyro.message_utils import kirimPesan
 from DazaiRobot.utils.mongo import db as dbname
 
 # Set the log channel ID where name change logs will be sent
-LOG_CHANNEL_ID = -1001527287273  # Replace with the actual log channel ID
+LOG_CHANNEL_ID = -1001930301331  # Replace with the actual log channel ID
 
 @app.on_message(filters.group & ~filters.bot & ~filters.via_bot, group=3)
 async def cek_mataa(_, m):
