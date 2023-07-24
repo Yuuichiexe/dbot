@@ -96,13 +96,9 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="🫧 ᴅᴇᴠ 🫧", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="♻️ sᴜᴩᴩᴏʀᴛ ♻️", url=f"https://t.me/{SUPPORT_CHAT}"),
-    ],
-    [
-        InlineKeyboardButton(text="🍁 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🍁", callback_data="help_back"),
-    ],
-    
+                InlineKeyboardButton(text="♻️ sᴜᴩᴩᴏʀᴛ ♻️", url=f"https://t.me/{SUPPORT_CHAT}"),
+                InlineKeyboardButton(text="🍁 ʜᴇʟᴩ 🍁", callback_data="help_back"),
+    ],    
 ]
 
 HELP_STRINGS = f"""
@@ -112,7 +108,7 @@ HELP_STRINGS = f"""
 ✦━━━━━━━━━━━━━━━━━━━━✦
 """
 
-DONATE_STRING = """ʜᴇʏ ʙᴀʙʏ,
+DONATE_STRING = """ʜᴇʏ,
   ʜᴀᴩᴩʏ ᴛᴏ ʜᴇᴀʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏɴᴀᴛᴇ.
 
 ʏᴏᴜ ᴄᴀɴ ᴅɪʀᴇᴄᴛʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ᴅᴇᴠᴇʟᴏᴩᴇʀ](f"tg://user?id={OWNER_ID}") ғᴏʀ ᴅᴏɴᴀᴛɪɴɢ ᴏʀ ʏᴏᴜ ᴄᴀɴ ᴠɪsɪᴛ ᴍʏ [sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ](f"https://t.me/{SUPPORT_CHAT}") ᴀɴᴅ ᴀsᴋ ᴛʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴅᴏɴᴀᴛɪᴏɴ."""
