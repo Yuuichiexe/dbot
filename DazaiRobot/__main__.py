@@ -83,7 +83,7 @@ PM_START_TEXT = """
 *ᴋᴏɴɴɪᴄʜɪᴡᴀ* {}, [💌]({})
 *ᴛʜɪs ɪs* ᴅᴀ𝓩ᴀɪ 
 ✦⋆⋇────────────────⋇⋆✦
-⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/a4d09b30eb8c9f9e98762.jpg)
+⦿ ɪ'ᴍ ᴀ ᴩᴏᴡᴇʀғᴜʟ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴀsᴇᴅ ᴏɴ ʙᴜɴɢᴏ sᴛʀᴀʏ ᴅᴏɢs ᴀɴɪᴍᴇ[.](https://te.legra.ph/file/adad1a2bb50c31aeceb1e.jpg)
 
 ✦⋆⋇────────────────⋇⋆✦
 ⦿ *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ.*
@@ -96,9 +96,12 @@ buttons = [
         ),
     ],
     [
-                InlineKeyboardButton(text="♻️ sᴜᴩᴩᴏʀᴛ ♻️", url=f"https://t.me/{SUPPORT_CHAT}"),
-                InlineKeyboardButton(text="🍁 ʜᴇʟᴩ 🍁", callback_data="help_back"),
-    ],    
+                InlineKeyboardButton(text=" sᴜᴩᴩᴏʀᴛ 👥", url=f"https://t.me/{SUPPORT_CHAT}"),
+                InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs 💢", url="https://t.me/dazaksisi_updates"),
+    ],
+    [
+                InlineKeyboardButton(text="❔ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs ❔", callback_data="help_back"),
+    ],
 ]
 
 HELP_STRINGS = f"""
