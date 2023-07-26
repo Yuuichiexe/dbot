@@ -50,3 +50,4 @@ orjson
 redis
 humanize
 nekos.py
+unidecode
