@@ -1,5 +1,5 @@
-from GabiBraunRobot import pbot as app
-from GabiBraunRobot import TOKEN as bot_token
+from DazaiRobot import pbot as app
+from DazaiRobot import TOKEN as bot_token
 from pyrogram import filters
 import requests
 from urllib.parse import quote_plus
