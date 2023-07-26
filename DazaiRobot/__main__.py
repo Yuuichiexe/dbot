@@ -83,8 +83,9 @@ PM_START_TEXT = """
  𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
  𝖨'𝗆 ᴅᴀ𝓩ᴀɪ 
 ───────────────────────
-◎ 𝖨'𝗆 𝖺𝗇 𝗉𝗈𝗐𝖾𝗋𝖿𝗎𝗅 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝖺𝗌𝖾𝖽 𝗈𝗇 𝖻𝗎𝗇𝗀𝗈 𝗌𝗍𝗋𝖺𝗒 𝖽𝗈𝗀𝗌 𝖺𝗇𝗂𝗆𝖾[.](https://te.legra.ph/file/c1d80bf2e4fd56950a5f7.jpg)
-
+◎ 𝖨'𝗆 𝖺 𝗉𝗈𝗐𝖾𝗋𝖿𝗎𝗅 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝖺𝗌𝖾𝖽 𝗈𝗇 𝖻𝗎𝗇𝗀𝗈 𝗌𝗍𝗋𝖺𝗒 𝖽𝗈𝗀𝗌 𝖺𝗇𝗂𝗆𝖾[.](https://te.legra.ph/file/c1d80bf2e4fd56950a5f7.jpg)
+◎ 𝖴𝗉𝗍𝗂𝗆𝖾: {}
+───────────────────────
 ◎ 𝖧𝗂𝗍 𝗍𝗁𝖾 𝗁𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝗍𝗈 𝗄𝗇𝗈𝗐 𝗆𝗒 𝖺𝖻𝗂𝗅𝗂𝗍𝗂𝖾𝗌.
 """
 buttons = [
@@ -239,7 +240,7 @@ def start(update: Update, context: CallbackContext):
             
             
             update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+                PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), escape_markdown(uptime), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -411,7 +412,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
     elif query.data == "dazai_back":
         first_name = update.effective_user.first_name 
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), escape_markdown(uptime), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
