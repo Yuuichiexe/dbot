@@ -168,4 +168,4 @@ dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 __help__ = """
 ➛ /afk reason - when someone will tag you bot will inform that user that you're afk.
 """
-__mod_name__ = "𝖠𝖿𝗄"
+__mod_name__ = "Aꜰᴋ"
