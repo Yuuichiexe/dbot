@@ -190,6 +190,6 @@ async def drawText(image_path, text):
     return webp_file
 
 
-__mod_name__ = "𝖬𝗆𝖿"
+__mod_name__ = "Mᴇᴍɪꜰʏ"
 __help__ = """ 
 ➛ /mmf <ᴛᴇxᴛ> ◉ ᴛᴏ ᴍᴇᴍɪғʏ """
