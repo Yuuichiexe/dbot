@@ -81,15 +81,15 @@ async def get_file_id_from_message(message):
 
 @app.on_message(filters.command(["pp","grs","reverse","p","s"]))
 async def _reverse(_,msg):
-    text = await msg.reply("Downloading Media To My Locals...")
+    text = await msg.reply("𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝗆𝖾𝖽𝗂𝖺 𝗍𝗈 𝗆𝗒 𝗅𝗈𝖼𝖺𝗅𝗌...")
     file_id = await get_file_id_from_message(msg)
     if not file_id:
-        return await text.edit("Reply to a Photo or sticker")
+        return await text.edit("𝖱𝖾𝗉𝗅𝗒 𝗍𝗈 𝖺 𝗉𝗁𝗈𝗍𝗈 𝗈𝗋 𝗌𝗍𝗂𝖼𝗄𝖾𝗋")
     await text.edit("Searching...")    
     result = await Sauce(bot_token,file_id)
     if not result["output"]:
-        return await text.edit("Couldn't find anything")
-    await text.edit("Gathering Sauce...")
+        return await text.edit("𝖢𝗈𝗎𝗅𝖽𝗇'𝗍 𝖿𝗂𝗇𝖽 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀")
+    await text.edit("𝖦𝖺𝗍𝗁𝖾𝗋𝗂𝗇𝗀 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇...")
     try:
         k = result['output']
         n = k.split(" ")
@@ -99,7 +99,7 @@ async def _reverse(_,msg):
     except Exception:
         l = result['output']
     resultsss = f'Sauce: <code>{l}</code>'
-    await text.edit(f'Sauce: <code>{l}</code>',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Link",url=result["similar"])]]))
+    await text.edit(f'𝖲𝖺𝗎𝖼𝖾: <code>{l}</code>',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖫𝗂𝗇𝗄",url=result["similar"])]]))
    
     # source = str(trans.detect(str(result["output"])))
     
