@@ -212,4 +212,4 @@ Hey I can convert files here.
  ➛ /unzip*:* reply to a telegram file to decompress it from the .zip format
 """
 
-__mod_name__ = "𝖹𝗂𝗉𝗉𝖾𝗋"
+__mod_name__ = "Zɪᴘᴘɪɴɢ"
