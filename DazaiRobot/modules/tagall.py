@@ -97,7 +97,7 @@ async def cancel_spam(event):
         return await event.respond("__Stopped mention.__")
 
 
-__mod_name__ = "Tᴀɢ Aʟʟ"
+__mod_name__ = "𝖳𝖺𝗀 𝖠𝗅𝗅"
 __help__ = """
 *Only for admins*
 
