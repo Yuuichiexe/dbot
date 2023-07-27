@@ -53,7 +53,7 @@ __help__ = """
 
 [ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs](https://te.legra.ph/LANGUAGE-CODES-05-23-2)
 """
-__mod_name__ = "Tʀᴀɴsʟᴀᴛᴏʀ"
+__mod_name__ = "𝖳𝗋𝖺𝗇𝗌𝗅𝖺𝗍𝗈𝗋"
 
 TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], totranslate, run_async=True)
 
