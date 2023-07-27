@@ -48,6 +48,11 @@
          "required": true,
          "value": "True"
       },
+      "DB_URI": {
+         "description": "Your sql db.. leave this empty if u dont have one.",
+         "required": false,
+         "value": ""
+      },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
