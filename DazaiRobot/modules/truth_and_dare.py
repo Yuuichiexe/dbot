@@ -30,4 +30,4 @@ __help__ = """
  ➛ /dare *:* Sends a random dare string.
 """
 
-__mod_name__ = "Tʀᴜᴛʜ-Dᴀʀᴇ"
+__mod_name__ = "𝖳𝗋𝗎𝗍𝗁/𝖣𝖺𝗋𝖾"
