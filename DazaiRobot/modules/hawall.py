@@ -158,4 +158,4 @@ Example:
 ➛ /cock: reply to someone or self it well show you how cock's size
 """
 
-__mod_name__ = "𝖥𝗎𝗇"
+__mod_name__ = "ʜᴏᴡ ᴀʟʟ"
