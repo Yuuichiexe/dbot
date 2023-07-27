@@ -25,7 +25,7 @@ def schedule(_, message):
     message.reply_text(f"**Today's Schedule:**\nTime-Zone: Tokyo (GMT +9)\n\n{text}")
 
 
-__mod_name__ = "sᴄʜᴇᴅᴜʟᴇ"
+__mod_name__ = "𝖲𝖼𝗁𝖾𝖽𝗎𝗅𝖾"
 
 __help__ = """
 ➛ `/latest`: to see latest anime episode
