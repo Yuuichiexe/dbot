@@ -11,10 +11,10 @@ from DazaiRobot.events import register
 
 edit_time = 5
 """ =======================Horix====================== """
-file1 = "https://graph.org/file/8af7c21f6b5c5dfb55241.jpg"
-file2 = "https://graph.org/file/2808aba74d5f1667f71ee.jpg"
-file3 = "https://graph.org/file/488755b1ed61dffb45dca.jpg"
-file4 = "https://graph.org/file/354a3c1adb16121b89848.jpg"
+file1 = "https://te.legra.ph/file/596df99c920537cfc75b6.jpg"
+file2 = "https://te.legra.ph/file/7d10529848bbde4b447b7.jpg"
+file3 = "https://te.legra.ph/file/1fb1f71aa5dcd30f7f928.jpg"
+file4 = "https://te.legra.ph/file/0f896bb54001928a5643b.jpg"
 """ =======================Horix====================== """
 
 START_TIME = datetime.utcnow()
@@ -45,15 +45,15 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    HoriX = f"**☘️I'm {BOT_NAME}\nI'm Working Perfectly **\n\n"
-    HoriX += f"**✨My Uptime :** `{uptime}`\n\n"
-    HoriX += f"**👺My Creator:** [TOAA](https://t.me/Itz_Shion_II)"
+    HoriX = f"*🍃 𝖨'𝗆 {BOT_NAME}\n𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒*\n\n"
+    HoriX += f"**𝖬𝗒 𝗎𝗉𝗍𝗂𝗆𝖾:** `{uptime}`\n\n"
+    HoriX += f"**𝖬𝗒 𝖼𝗋𝖾𝖺𝗍𝗈𝗋:** [𝖺𝗇𝗈𝗇𝗒𝗆𝗈𝗎𝗌](https://t.me/Itz_Shion_II)"
     BUTTON = [
         [
-            Button.url("♻️Help", f"https://t.me/{BOT_USERNAME}?start=help"),
-            Button.url("🌱Support", f"https://t.me/{SUPPORT_CHAT}"),
+            Button.url("ʜᴇʟᴘ ❓", f"https://t.me/{BOT_USERNAME}?start=help"),
+            Button.url("sᴜᴘᴘᴏʀᴛ ♻️", f"https://t.me/{SUPPORT_CHAT}"),
         ]
     ]
-    await Horix.send_file(yes.chat_id, file="https://graph.org/file/7d58c0096a704c8a93e21.mp4",caption=HoriX, buttons=BUTTON)
+    await Horix.send_file(yes.chat_id, file="https://te.legra.ph/file/3aa80d75e2b9ad9537100.mp4",caption=HoriX, buttons=BUTTON)
     
 __mod_name__ = "Aʟɪᴠᴇ"
