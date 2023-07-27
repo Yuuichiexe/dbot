@@ -482,7 +482,7 @@ __handlers__ = [
 ]
 
 
-__mod_name__ = "𝖲𝖿𝗐"
+__mod_name__ = "𝚂ғᴡ"
 __help__ = """
 *Commands* *:*  
 
