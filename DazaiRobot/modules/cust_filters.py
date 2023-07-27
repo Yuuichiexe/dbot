@@ -640,7 +640,7 @@ Check ➛ /markdownhelp to know more!
 
 """
 
-__mod_name__ = "𝖥𝗂𝗅𝗍𝖾𝗋𝗌"
+__mod_name__ = "Fɪʟᴛᴇʀs"
 
 FILTER_HANDLER = CommandHandler("filter", filters, run_async=True)
 STOP_HANDLER = CommandHandler("stop", stop_filter, run_async=True)
