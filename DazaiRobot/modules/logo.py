@@ -319,7 +319,7 @@ async def lego(event):
             os.remove(fname)
 
 
-__mod_name__ = "Lᴏɢᴏ"
+__mod_name__ = "𝖫𝗈𝗀𝗈"
 
 __help__ = """
 I can create some beautiful and attractive logo for your profile pics.
