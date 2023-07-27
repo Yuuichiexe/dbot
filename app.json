@@ -48,7 +48,7 @@
          "required": true,
          "value": "True"
       },
-      "DB_URI": {
+      "DATABASE_URI": {
          "description": "Your sql db.. leave this empty if u dont have one.",
          "required": false,
          "value": ""
