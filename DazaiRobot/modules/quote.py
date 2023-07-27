@@ -395,4 +395,4 @@ async def quott_(event):
     return message
 
 
-__mod_name__ = "𝖰𝗎𝗈𝗍𝗅𝗒"
+__mod_name__ = "𝐐ᴜᴏᴛʟʏ"
