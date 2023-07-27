@@ -20,8 +20,7 @@ def handwrite(update: Update, context: CallbackContext):
 Successfully Written Text 💘
 
 ✨ **Written By :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-🥀 **Requested by :** {update.effective_user.first_name}
-❄ **Link :** `{req}`""",
+🥀 **Requested by :** {update.effective_user.first_name}""",
         parse_mode=ParseMode.MARKDOWN,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -43,7 +42,7 @@ __help__ = """
 WRITE_HANDLER = DisableAbleCommandHandler("write", handwrite, run_async=True)
 dispatcher.add_handler(WRITE_HANDLER)
 
-__mod_name__ = "WʀɪᴛᴇTᴏᴏʟ"
+__mod_name__ = "𝖶𝗋𝗂𝗍𝖾"
 
 __command_list__ = ["write"]
 __handlers__ = [WRITE_HANDLER]
