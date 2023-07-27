@@ -93,4 +93,4 @@ __help__ = """
  ➛ /tgt [custom name]: Get telegraph link of replied text with custom name.
 """
 
-__mod_name__ = "T-Gʀᴀᴘʜ"
+__mod_name__ = "𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗉𝗁"
