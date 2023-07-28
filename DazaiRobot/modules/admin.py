@@ -34,7 +34,7 @@ def set_sticker(update: Update, context: CallbackContext):
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
         return msg.reply_text(
-            "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴩ ɪɴғᴏ ʙᴀʙʏ !"
+            "» 𝖸𝗈𝗎 𝖽𝗈𝗇'𝗍 𝗁𝖺𝗏𝖾 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇𝗌 𝗍𝗈 𝖼𝗁𝖺𝗇𝗀𝖾 𝗀𝗋𝗈𝗎𝗉 𝗂𝗇𝖿𝗈 !"
         )
 
     if msg.reply_to_message:
@@ -185,14 +185,14 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("» 𝖸𝗈𝗎 𝖽𝗈𝗇'𝗍 𝗁𝖺𝗏𝖾 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇𝗌 𝗍𝗈 𝖠𝖽𝖽 𝗇𝖾𝗐 𝖺𝖽𝗆𝗂𝗇𝗌 !")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            " ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
         )
         return
 
@@ -202,12 +202,12 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text(" 𝖠𝖼𝖼𝗈𝗋𝖽𝗂𝗇𝗀 𝗍𝗈 𝗆𝖾 𝗍𝗁𝖺𝗍 𝗎𝗌𝖾𝗋 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗇 𝖺𝖽𝗆𝗂𝗇 𝗁𝖾𝗋𝖾!")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            " 𝖨 𝖼𝖺𝗇'𝗍 𝗉𝗋𝗈𝗆𝗈𝗍𝖾 𝗆𝗒𝗌𝖾𝗅𝖿, 𝗆𝗒 𝗈𝗐𝗇𝖾𝗋 𝖽𝗂𝖽𝗇'𝗍 𝗍𝗈𝗅𝖽 𝗆𝖾 𝗍𝗈 𝖽𝗈 𝗌𝗈."
         )
         return
 
@@ -231,13 +231,13 @@ def promote(update: Update, context: CallbackContext) -> str:
             message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "𝖲𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝗐𝖾𝗇𝗍 𝗐𝗋𝗈𝗇𝗀, 𝗆𝖺𝗒𝖻𝖾 𝗌𝗈𝗆𝖾𝗈𝗇𝖾 𝖾𝗅𝗌𝖾 𝗉𝗋𝗈𝗆𝗈𝗍𝖾 𝗍𝗁𝖺𝗍 𝗎𝗌𝖾𝗋 𝖻𝖾𝖿𝗈𝗋𝖾 𝗆𝖾."
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ</b> {chat.title}\n\nᴩʀᴏᴍᴏᴛᴇᴅ : {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>❕𝖯𝗋𝗈𝗆𝗈𝗍𝗂𝗇𝗀 𝖺 𝗎𝗌𝖾𝗋 𝗂𝗇</b> {chat.title}\n\n𝖯𝗋𝗈𝗆𝗈𝗍𝖾𝖽 𝗎𝗌𝖾𝗋 : {mention_html(user_member.user.id, user_member.user.first_name)}\n𝖯𝗋𝗈𝗆𝗈𝗍𝖾𝗋 : {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
@@ -270,14 +270,14 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("𝖸𝗈𝗎 𝖽𝗈𝗇'𝗍 𝗁𝖺𝗏𝖾 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇𝗌 𝗍𝗈 𝖠𝖽𝖽 𝗇𝖾𝗐 𝖺𝖽𝗆𝗂𝗇𝗌 !")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            " ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
         )
         return
 
@@ -287,7 +287,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("» 𝖠𝖼𝖼𝗈𝗋𝖽𝗂𝗇𝗀 𝗍𝗈 𝗆𝖾 𝗍𝗁𝖺𝗍 𝗎𝗌𝖾𝗋 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗇 𝖺𝖽𝗆𝗂𝗇 𝗁𝖾𝗋𝖾!")
         return
 
     if user_id == bot.id:
@@ -312,13 +312,13 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
             message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "𝖲𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝗐𝖾𝗇𝗍 𝗐𝗋𝗈𝗇𝗀, 𝗆𝖺𝗒𝖻𝖾 𝗌𝗈𝗆𝖾𝗈𝗇𝖾 𝖾𝗅𝗌𝖾 𝗉𝗋𝗈𝗆𝗈𝗍𝖾 𝗍𝗁𝖺𝗍 𝗎𝗌𝖾𝗋 𝖻𝖾𝖿𝗈𝗋𝖾 𝗆𝖾."
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ʟᴏᴡ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ </b>{chat.title}\n\n<b>ᴩʀᴏᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>» 𝖫𝗈𝗐 𝗉𝗋𝗈𝗆𝗈𝗍𝗂𝗇𝗀 𝖺 𝗎𝗌𝖾𝗋 𝗂𝗇 </b>{chat.title}\n\n<b>𝖯𝗋𝗈𝗆𝗈𝗍𝖾𝖽 𝗎𝗌𝖾𝗋 :</b> {mention_html(user_member.user.id, user_member.user.first_name)}\n𝖯𝗋𝗈𝗆𝗈𝗍𝖾𝗋 : {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
@@ -351,14 +351,14 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
         )
         return
 
@@ -368,12 +368,12 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
         )
         return
 
@@ -396,10 +396,10 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
             )
         return
 
@@ -435,7 +435,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
         )
         return
 
@@ -446,16 +446,16 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == "creator":
         message.reply_text(
-            "» ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴩᴜᴛ ᴍʏsᴇʟғ ɪɴ ᴅᴀɴɢᴇʀ."
+            "ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴩᴜᴛ ᴍʏsᴇʟғ ɪɴ ᴅᴀɴɢᴇʀ."
         )
         return
 
     if not user_member.status == "administrator":
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
         return
 
     if user_id == bot.id:
-        message.reply_text("» ɪ ᴄᴀɴ'ᴛ ᴅᴇᴍᴏᴛᴇ ᴍʏsᴇʟғ, ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ.")
+        message.reply_text("ɪ ᴄᴀɴ'ᴛ ᴅᴇᴍᴏᴛᴇ ᴍʏsᴇʟғ, ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ.")
         return
 
     try:
@@ -475,7 +475,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇᴍᴏᴛᴇᴅ ᴀ ᴀᴅᴍɪɴ ɪɴ <b>{chat.title}</b>\n\nᴅᴇᴍᴏᴛᴇᴅ : <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\nᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+            f"sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇᴍᴏᴛᴇᴅ ᴀ ᴀᴅᴍɪɴ ɪɴ <b>{chat.title}</b>\n\nᴅᴇᴍᴏᴛᴇᴅ : <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\nᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
             parse_mode=ParseMode.HTML,
         )
 
@@ -489,7 +489,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return log_message
     except BadRequest:
         message.reply_text(
-            "» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ ᴍᴀʏʙᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ"
+            "ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ ᴍᴀʏʙᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ"
             " ᴜsᴇʀ !",
         )
         return
