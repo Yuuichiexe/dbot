@@ -45,7 +45,7 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    HoriX = f"*🍃 𝖨'𝗆 {BOT_NAME}\n𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒*\n\n"
+    HoriX = f"**🍃 𝖨'𝗆 {BOT_NAME}\n𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒**\n\n"
     HoriX += f"**𝖬𝗒 𝗎𝗉𝗍𝗂𝗆𝖾:** `{uptime}`\n\n"
     HoriX += f"**𝖬𝗒 𝖼𝗋𝖾𝖺𝗍𝗈𝗋:** [𝖺𝗇𝗈𝗇𝗒𝗆𝗈𝗎𝗌](https://t.me/Itz_Shion_II)"
     BUTTON = [
@@ -54,6 +54,6 @@ async def hmm(yes):
             Button.url("sᴜᴘᴘᴏʀᴛ ♻️", f"https://t.me/{SUPPORT_CHAT}"),
         ]
     ]
-    await Horix.send_file(yes.chat_id, file="https://te.legra.ph/file/3aa80d75e2b9ad9537100.mp4",caption=HoriX, buttons=BUTTON)
+    await Horix.send_file(yes.chat_id, file="https://te.legra.ph/file/3ed6d473331d15da3471c.mp4",caption=HoriX, buttons=BUTTON)
     
 __mod_name__ = "Aʟɪᴠᴇ"
