@@ -6,11 +6,11 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
-import SagiriRobot.modules.sql.rules_sql as sql
-from SagiriRobot import dispatcher
-from SagiriRobot.modules.helper_funcs.alternate import typing_action
-from SagiriRobot.modules.helper_funcs.chat_status import user_admin
-from SagiriRobot.modules.helper_funcs.string_handling import markdown_parser
+import DazaiRobot.modules.sql.rules_sql as sql
+from DazaiRobot import dispatcher
+from DazaiRobot.modules.helper_funcs.alternate import typing_action
+from DazaiRobot.modules.helper_funcs.chat_status import user_admin
+from DazaiRobot.modules.helper_funcs.string_handling import markdown_parser
 
 
 @typing_action
