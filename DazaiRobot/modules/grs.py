@@ -99,7 +99,7 @@ async def _reverse(_,msg):
     except Exception:
         l = result['output']
     resultsss = f'Sauce: <code>{l}</code>'
-    await text.edit(f'𝖲𝖺𝗎𝖼𝖾: <code>{l}</code>',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖫𝗂𝗇𝗄",url=result["similar"])]]))
+    await text.edit(f'Results for <code>{l}</code>',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝖫𝗂𝗇𝗄",url=result["similar"])]]))
    
     # source = str(trans.detect(str(result["output"])))
     
