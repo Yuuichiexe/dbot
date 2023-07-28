@@ -47,7 +47,7 @@ async def hmm(yes):
     uptime = await _human_time_duration(int(uptime_sec))
     HoriX = f"**🍃 𝖨'𝗆 {BOT_NAME}\n𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒**\n\n"
     HoriX += f"**𝖬𝗒 𝗎𝗉𝗍𝗂𝗆𝖾:** `{uptime}`\n\n"
-    HoriX += f"**𝖬𝗒 𝖼𝗋𝖾𝖺𝗍𝗈𝗋:** [𝖺𝗇𝗈𝗇𝗒𝗆𝗈𝗎𝗌](https://t.me/Itz_Shion_II)"
+    HoriX += f"**𝖬𝗒 𝖼𝗋𝖾𝖺𝗍𝗈𝗋:** [A𝗇𝗈𝗇𝗒𝗆𝗈𝗎𝗌](tg://user?id=6171176459)"
     BUTTON = [
         [
             Button.url("ʜᴇʟᴘ ❓", f"https://t.me/{BOT_USERNAME}?start=help"),
