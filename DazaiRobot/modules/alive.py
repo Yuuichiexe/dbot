@@ -6,7 +6,7 @@ from telegram import __version__ as ptb
 from telethon import Button
 
 from DazaiRobot import BOT_NAME, BOT_USERNAME, SUPPORT_CHAT
-from DazaiRobot import pbot as Horix
+from DazaiRobot import telethn as Horix
 from DazaiRobot.events import register
 
 edit_time = 5
