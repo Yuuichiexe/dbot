@@ -140,7 +140,7 @@ Every chat works with different rules; this module will help make those rules cl
 ➛ /clearrules: Clears saved rules for the chat.
 """
 
-__mod_name__ = "𝖱ᴜʟᴇs"
+__mod_name__ = "Rules"
 
 GET_RULES_HANDLER = CommandHandler(
     "rules", get_rules, filters=Filters.chat_type.groups, run_async=True
