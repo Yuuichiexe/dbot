@@ -5,7 +5,7 @@ from DazaiRobot.events import register
 async def games(event):
 
     await event.reply(
-                    "𝗁𝖾𝗅𝗅𝗈, 𝗐𝖾 𝗁𝖺𝗏𝖾 𝖺𝗍𝗍𝖼𝗁𝖾𝖽 𝗌𝗈𝗆𝖾 𝗀𝖺𝗆𝖾𝗌 𝖿𝗈𝗋 𝗒𝗈𝗎, 𝗉𝗋𝖾𝗌𝗌 𝗍𝗁𝖾 𝖻𝗎𝗍𝗍𝗈𝗇 𝖺𝗇𝖽 𝗉𝗅𝖺𝗒 𝗀𝖺𝗆𝖾𝗌",
+                    "𝖧𝖾𝗒 𝖨'𝗏𝖾 𝗀𝗈𝗍 𝗌𝗈𝗆𝖾 𝗀𝖺𝗆𝖾𝗌 𝖿𝗈𝗋 𝗒𝗈𝗎! 𝗉𝗋𝖾𝗌𝗌 𝗍𝗁𝖾 𝖻𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝗍𝗈 𝗉𝗅𝖺𝗒 𝗍𝗁𝖾 𝗀𝖺𝗆𝖾...",
                     buttons=[
                         [
                             Button.url(
@@ -35,5 +35,5 @@ async def games(event):
 __mod_name__ = "𝙶ᴀᴍᴇs"
 
 __help__ = """
-> /games : Some games for ur boredom
+> /games : 𝖲𝗁𝗈𝗐𝗌 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝗀𝖺𝗆𝖾𝗌 𝗍𝗈 𝗉𝗅𝖺𝗒.
 """
