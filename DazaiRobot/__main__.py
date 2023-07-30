@@ -78,7 +78,7 @@ PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
 
-DAZAI_IMG = "https://te.legra.ph/file/290493635ba781d493e29.mp4"
+DAZAI_IMG = "https://te.legra.ph/file/35522fe621d4fa73b054a.jpg"
 
 PM_START_TEXT = """ 
 𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
