@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InputMediaPhoto, Message
 
 # REPO => Your Bots File Name
-from DazaiRobot import app
+from DazaiRobot import pbot as app
 
 
 # Command handler for the '/bingimg' command
