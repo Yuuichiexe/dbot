@@ -78,6 +78,7 @@ PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
 
+DAZAI_IMG = "https://te.legra.ph/file/290493635ba781d493e29.mp4"
 
 PM_START_TEXT = """ 
 𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
@@ -245,8 +246,8 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ!\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            DAZAI_IMG,
+            caption="𝖨'𝗆 𝖺𝗅𝗂𝗏𝖾 𝖺𝗇𝖽 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒!\n<b>𝖨 𝖽𝗂𝖽𝗇'𝗍 𝗌𝗅𝖾𝗉𝗍 𝗌𝗂𝗇𝖼𝖾​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
