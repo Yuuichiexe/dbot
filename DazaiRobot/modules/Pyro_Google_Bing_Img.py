@@ -10,7 +10,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InputMediaPhoto, Message
 
 # REPO => Your Bots File Name
-from REPO import app
+from DazaiRobot import app
 
 
 # Command handler for the '/bingimg' command
@@ -53,7 +53,7 @@ def bingimg_search(client: Client, message: Message):
 
 
 # Command handler for the '/googleimg' command
-@app.on_message(filters.command("googleimg"))
+@app.on_message(filters.command("image"))
 def googleimg_search(client: Client, message: Message):
     try:
         text = message.text.split(None, 1)[
@@ -65,7 +65,7 @@ def googleimg_search(client: Client, message: Message):
         )  # Return error if no query is provided
 
     search_message = message.reply_text(
-        "Searching image using Google search 🔎"
+        "Searching image 🔎"
     )  # Display searching message
 
     # Send request to Google image search API
