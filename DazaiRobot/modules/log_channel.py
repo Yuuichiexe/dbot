@@ -201,7 +201,7 @@ Setting the log channel is done by:
 ➛ forwarding the /setlog to the group
 """
 
-    __mod_name__ = "Lᴏɢs-ɪɴꜰᴏ"
+    __mod_name__ = "𝙻ᴏɢs-ɪɴꜰᴏ"
 
     LOG_HANDLER = CommandHandler("logchannel", logging, run_async=True)
     SET_LOG_HANDLER = CommandHandler("setlog", setlog, run_async=True)
