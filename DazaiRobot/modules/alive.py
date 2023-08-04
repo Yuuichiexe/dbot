@@ -56,4 +56,4 @@ async def hmm(yes):
     ]
     await Horix.send_file(yes.chat_id, file="https://te.legra.ph/file/27047ede7f2e6689c9032.mp4",caption=HoriX, buttons=BUTTON)
     
-__mod_name__ = "Aʟɪᴠᴇ"
+__mod_name__ = "𝙰ʟɪᴠᴇ"
