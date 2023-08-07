@@ -24,7 +24,7 @@ async def bot_sys_stats():
     users = sql.num_users()
     chats = sql.num_chats()
     stats = f"""
-➢ Dazai's Current System Stats
+➢ 𝖣𝖺𝗓𝖺𝗂'𝗌 𝖼𝗎𝗋𝗋𝖾𝗇𝗍 𝗌𝗒𝗌𝗍𝖾𝗆 𝗌𝗍𝖺𝗍𝗌:
 
 ───────────────────────
 • UPTIME: {formatter.get_readable_time((bot_uptime))}
