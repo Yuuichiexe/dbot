@@ -92,7 +92,7 @@ def ping(update: Update, context: CallbackContext):
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
     text = f""" 
-           <b>PONG!!</b>\n<b>Speed:</b> <code>{telegram_ping}</code>\n<b>Service uptime:</b> <code>{uptime}</code>
+           <b>PONG!!!</b>\n<b>sᴘᴇᴇᴅ:</b> <code>{telegram_ping}</code>\n<b>sᴇʀᴠɪᴄᴇ ᴜᴘᴛɪᴍᴇ:</b> <code>{uptime}</code>
            """
 
 
@@ -122,9 +122,9 @@ def pingall(update: Update, context: CallbackContext):
     pinged_list.insert(2, '')
     uptime = get_readable_time((time.time() - StartTime))
 
-    reply_msg = "Ping results are:\n"
+    reply_msg = "𝖯𝗂𝗇𝗀 𝗋𝖾𝗌𝗎𝗅𝗍𝗌 𝖺𝗋𝖾 ⏱️:\n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += '\n<b>Service uptime:</b> <code>{}</code>'.format(uptime)
+    reply_msg += '\n<b>sᴇʀᴠɪᴄᴇ ᴜᴘᴛɪᴍᴇ:</b> <code>{}</code>'.format(uptime)
 
     update.effective_message.reply_photo(
         PING_IMG, caption=reply_msg,
