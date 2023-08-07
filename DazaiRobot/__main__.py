@@ -7,6 +7,7 @@ from telethon import __version__ as tlhver
 from platform import python_version as y
 from sys import argv
 
+from pyrogram import filters
 from pyrogram import __version__ as pyrover
 from telegram import __version__ as telever
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
@@ -48,7 +49,7 @@ from DazaiRobot import (
 from DazaiRobot.modules import ALL_MODULES
 from DazaiRobot.modules.helper_funcs.chat_status import is_user_admin
 from DazaiRobot.modules.helper_funcs.misc import paginate_modules
-
+from DazaiRobot.modules.sudoers import bot_sys_stats
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -403,6 +404,9 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
+                        InlineKeyboardButton(text="sʏsᴛᴇᴍ sᴛᴀᴛs", callback_data="stats_callback")
+                    ],
+                    [
                         InlineKeyboardButton(text="𝖡𝖺𝖼𝗄", callback_data="dazai_back"),
                     ],
                 ]
@@ -417,6 +421,12 @@ def dazai_about_callback(update: Update, context: CallbackContext):
             timeout=60,
             disable_web_page_preview=False,
         )
+
+@pbot.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
 
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
