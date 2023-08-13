@@ -45,7 +45,7 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    HoriX = f"**🍃 𝖨'𝗆 {BOT_NAME}\n𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒**\n\n"
+    HoriX = f"**🍃 𝖨'𝗆 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒**\n\n"
     HoriX += f"**𝖬𝗒 𝗎𝗉𝗍𝗂𝗆𝖾:** `{uptime}`\n\n"
     HoriX += f"**𝖬𝗒 𝖼𝗋𝖾𝖺𝗍𝗈𝗋:** [A𝗇𝗈𝗇𝗒𝗆𝗈𝗎𝗌](tg://user?id=6171176459)"
     BUTTON = [
