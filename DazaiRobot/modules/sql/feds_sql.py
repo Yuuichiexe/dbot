@@ -1,8 +1,8 @@
 import ast
 import threading
 
-from SagiriRobot import dispatcher
-from SagiriRobot.modules.sql import BASE, SESSION
+from DazaiRobot import dispatcher
+from DazaiRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from telegram.error import BadRequest, Unauthorized
 
