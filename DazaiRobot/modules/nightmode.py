@@ -108,7 +108,7 @@ async def job_close():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                f"**Night Mode Started**\n\n`Group Is Closing Till 6 Am, Only admins can messages in this chat.`\n\n__Powered By {BOT_NAME}__",
+                f"12:00 Am, Group Is Closing Till 6 Am. Night Mode Started !",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
