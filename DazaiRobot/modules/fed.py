@@ -22,17 +22,17 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import SagiriRobot.modules.sql.feds_sql as sql
-from SagiriRobot import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
-from SagiriRobot.modules.disable import DisableAbleCommandHandler
-from SagiriRobot.modules.helper_funcs.alternate import send_message
-from SagiriRobot.modules.helper_funcs.chat_status import is_user_admin
-from SagiriRobot.modules.helper_funcs.extraction import (
+import DazaiRobot.modules.sql.feds_sql as sql
+from DazaiRobot import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
+from DazaiRobot.modules.disable import DisableAbleCommandHandler
+from DazaiRobot.modules.helper_funcs.alternate import send_message
+from DazaiRobot.modules.helper_funcs.chat_status import is_user_admin
+from DazaiRobot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from SagiriRobot.modules.helper_funcs.string_handling import markdown_parser
+from DazaiRobot.modules.helper_funcs.string_handling import markdown_parser
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
