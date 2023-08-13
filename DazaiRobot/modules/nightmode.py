@@ -133,7 +133,7 @@ async def job_open():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                f"**Night Mode Ended**\n\n`Group is opening again now everyone can send messages in this chat.`\n__Powered By {BOT_NAME}__",
+                f"**Night Mode Ended**\n\n`Group is opening again now everyone can send messages in this chat.",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
