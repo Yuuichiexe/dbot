@@ -175,6 +175,7 @@ def send_help(chat_id, text, keyboard=None):
     )
 
 
+@run_async
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
     update.effective_message.reply_text(
@@ -182,8 +183,9 @@ def test(update: Update, context: CallbackContext):
     )
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
+    
 
-
+@run_async
 def start(update: Update, context: CallbackContext):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
