@@ -52,7 +52,7 @@ def send_rules(update, chat_id, from_pm=False):
             "Please click the button below to see the rules.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Rules", url=f"t.me/{bot.username}?start={chat_id}")
+                    text="𝖱𝗎𝗅𝖾𝗌 🖇️", url=f"t.me/{bot.username}?start={chat_id}")
             ]]))
     else:
         update.effective_message.reply_text(
