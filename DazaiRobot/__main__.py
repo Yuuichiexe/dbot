@@ -407,10 +407,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                             text="𝖴𝗉𝖽𝖺𝗍𝖾𝗌 💢", 
                             url="https://t.me/daxai_updates",
                         ),
-                    ],
-                    [
-                        InlineKeyboardButton(text="sʏsᴛᴇᴍ sᴛᴀᴛs", callback_data="stats_callback")
-                    ],
+                    ],    
                     [
                         InlineKeyboardButton(text="𝖡𝖺𝖼𝗄", callback_data="dazai_back"),
                     ],
