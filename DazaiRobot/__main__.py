@@ -408,7 +408,10 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                             text="𝖴𝗉𝖽𝖺𝗍𝖾𝗌 💢", 
                             url="https://t.me/daxai_updates",
                         ),
-                    ],    
+                    ],
+                    [
+                        InlineKeyboardButton(text="❗ 𝖳𝖾𝗋𝗆𝗌 𝖺𝗇𝖽 𝖢𝗈𝗇𝖽𝗂𝗍𝗂𝗈𝗇𝗌 ❗", url=f"https://telegra.ph/Dazai-08-20-2"),
+                    ],
                     [
                         InlineKeyboardButton(text="𝖡𝖺𝖼𝗄", callback_data="dazai_back"),
                     ],
