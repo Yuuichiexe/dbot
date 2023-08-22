@@ -716,9 +716,9 @@ def main():
         try:
             dispatcher.bot.sendAnimation(
                 f"@{SUPPORT_CHAT}",
-                animation="https://te.legra.ph/file/0479c847b0bc301f663c1.mp4",
+                animation="https://te.legra.ph/file/05573eaaebb55d553d9fb.mp4",
                 caption=f"""
-ㅤ{BOT_NAME} ɪs ʙᴀᴄᴋ ᴛᴏ ᴡᴏʀᴋ!
+{BOT_NAME} ɪs ᴀʟɪᴠᴇ!
 """,
                 parse_mode=ParseMode.MARKDOWN,
             )
