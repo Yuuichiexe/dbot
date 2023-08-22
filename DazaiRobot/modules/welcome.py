@@ -193,7 +193,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Be cool! A member of the Heroes Association just joined.",
+                    "Be cool! A member of the Osamu Association just joined.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -264,14 +264,14 @@ def new_member(update: Update, context: CallbackContext):
                     return
                 bot.send_message(
                     EVENT_LOGS,
-                    "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>".format(
+                    "#NEW_GROUP\n<b>ɢʀᴏᴜᴘ ɴᴀᴍᴇ:</b> {}\n<b>ɪᴅ:</b> <code>{}</code>".format(
                         html.escape(chat.title),
                         chat.id,
                     ),
                     parse_mode=ParseMode.HTML,
                 )
                 update.effective_message.reply_text(
-                    "Watashi ga kita !", reply_to_message_id=reply
+                    "𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝗮𝗱𝗱𝗶𝗻𝗴 𝗺𝗲 𝗶𝗻 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽! 🤍", reply_to_message_id=reply
                 )
                 continue
 
