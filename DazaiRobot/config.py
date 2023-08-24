@@ -7,8 +7,8 @@ class Config(object):
 
     CASH_API_KEY = ""  # Get this value for currency converter from https://www.alphavantage.co/support/#api-key
 
-    DATABASE_URL = ""  # A sql database url from elephantsql.com
-
+    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database module
+   
     EVENT_LOGS = ()  # Event logs channel to note down important bot level events
 
     REDIS_URL = "" # Get it from redis.com
