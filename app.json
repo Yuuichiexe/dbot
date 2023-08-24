@@ -48,10 +48,10 @@
          "required": true,
          "value": "True"
       },
-      "DATABASE_URI": {
-         "description": "Your sql db.. leave this empty if u dont have one.",
+      "SQLALCHEMY_DATABASE_URI": {
+         "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
-         "value": ""
+         "value": "sqldbtype://username:pw@hostname:port/db_name"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
