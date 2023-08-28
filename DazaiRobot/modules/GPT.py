@@ -2,7 +2,7 @@ from io import BytesIO
 from pyrogram import Client, filters
 
 from DazaiRobot.utils.helper import async_searcher
-from DazaiRobot import LOGS
+from DazaiRobot import logs
 
 @Client.on_message(filters.command("gpt2", prefixes="."))
 async def chatgpt2(client, message):
@@ -32,7 +32,7 @@ async def chatgpt2(client, message):
             headers={"Content-Type": "application/json"},
         )
         if not (response and "message" in response):
-            LOGS.error(response)
+            logs.error(response)
             raise ValueError("Invalid Response from Server")
 
         response = response.get("message")
@@ -51,5 +51,5 @@ async def chatgpt2(client, message):
                 )
             await eris.delete()
     except Exception as exc:
-        LOGS.exception(exc)
+        logs.exception(exc)
         await eris.edit(f"Ran into an Error: \n{exc}")
