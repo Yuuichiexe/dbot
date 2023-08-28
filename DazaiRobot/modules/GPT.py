@@ -1,7 +1,7 @@
 from io import BytesIO
 from pyrogram import Client, filters
 
-from DazaiRobot.Pyro.helper import async_searcher
+from DazaiRobot.utils.helper import async_searcher
 from DazaiRobot import LOGS
 
 @Client.on_message(filters.command("gpt2", prefixes="."))
