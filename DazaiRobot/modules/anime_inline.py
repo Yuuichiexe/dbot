@@ -38,7 +38,7 @@ async def inline_query_handler(client, query):
                                          results=[
                                              InlineQueryResultPhoto(
                                                  caption="Hey! I have an inline mode, click the buttons below to start your exploration!",
-                                                 photo_url="https://telegra.ph/file/9a9517a5bd2ebade4d851.jpg",
+                                                 photo_url="https://te.legra.ph/file/c4a7de5ab8198657951e7.jpg",
                                                  parse_mode="html",
                                                  title="Need Help?",
                                                  description="Click Here!",
