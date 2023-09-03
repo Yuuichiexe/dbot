@@ -39,7 +39,7 @@ async def inline_query_handler(client, query):
                                              InlineQueryResultPhoto(
                                                  caption="Hey! I have an inline mode, click the buttons below to start your exploration!",
                                                  photo_url="https://te.legra.ph/file/c4a7de5ab8198657951e7.jpg",
-                                                 parse_mode="html",
+                                                 parse_mode="HTML",
                                                  title="Need Help?",
                                                  description="Click Here!",
                                                  reply_markup=InlineKeyboardMarkup(
