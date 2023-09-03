@@ -57,7 +57,7 @@ async def inline_query_handler(client, query):
                                                      ],
                                                          [
                                                          InlineKeyboardButton(
-                                                             text="Help", url="https://t.me/Chizurumanagementbot?start=help")
+                                                             text="Help", url="https://t.me/Dazaiprobot?start=help")
                                                      ]]
                                                  )
                                              ),
