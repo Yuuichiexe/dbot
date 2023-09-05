@@ -82,12 +82,16 @@ async def instatus(_, message):
 
 ⏱ ᴛɪᴍᴇ ᴛᴏᴏᴋ » `{time}` sᴇᴄᴏɴᴅs
 """,reply_markup=InlineKeyboardMarkup (
-    [[InlineKeyboardButton("❌ ᴄʟᴏsᴇ", callback_data="close_")]]))
+    [[InlineKeyboardButton("❌ ᴄʟᴏsᴇ", callback_data="close_reply")]]))
  
     else:
         await text.edit("`You must be an admin or group owner to perform this action.`")
         await asyncio.sleep(5)
 
+@Client.on_callback_query(filters.regex("close_reply"))
+async def close_reply(msg, CallbackQuery):
+    await CallbackQuery.message.delete()
+    
 __help__ = """
 ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ɪɴ ɢʀᴏᴜᴘ.
 
