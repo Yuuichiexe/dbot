@@ -51,7 +51,7 @@ async def user_and_reason(RiZoeL, message):
 @Client.on_message(filters.command("reqgban"))
 @capture_err
 async def reqgban(_, msg: Message):
-    if msg.from_user.id == owner_id or msg.from_user.id in DEVS:
+    if msg.from_user.id == owner_id or msg.from_user.id in DEV_USERS:
         return 
     if msg.chat.username:
         chat_username = (f"@{msg.chat.username} / `{msg.chat.id}`")
