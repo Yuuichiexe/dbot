@@ -47,7 +47,7 @@ async def user_and_reason(RiZoeL, message):
    return user, reason
 
 
-@Client.on_message(filters.command("gban"))
+@Client.on_message(filters.command("reqgban"))
 @capture_err
 async def reqgban(_, msg: Message):
     if msg.from_user.id == owner_id or msg.from_user.id in DEVS:
@@ -63,7 +63,7 @@ async def reqgban(_, msg: Message):
     datetimes_fmt = "%d-%m-%Y"
     datetimes = datetime.utcnow().strftime(datetimes_fmt)
 
-    thumb = "https://telegra.ph/file/12f02afce64bbeb428de6.jpg"
+    thumb = "https://te.legra.ph/file/96a77e65cf378c893938c.jpg"
     
     bug_report = f"""
 **#GbanReq : ** **@{owner_usn}**
