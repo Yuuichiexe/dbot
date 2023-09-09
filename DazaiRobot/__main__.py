@@ -232,11 +232,11 @@ def start(update: Update, context: CallbackContext):
             lol.edit_text("⚡")
             time.sleep(0.4)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ.")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ..")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ...")
-            time.sleep(0.2)
+            time.sleep(0.1)
             lol.delete()
             
             
