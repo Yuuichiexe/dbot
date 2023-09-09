@@ -88,7 +88,7 @@ async def instatus(_, message):
         await text.edit("`You must be an admin or group owner to perform this action.`")
         await asyncio.sleep(5)
 
-@Client.on_callback_query(filters.regex("close_reply"))
+@pgram.on_callback_query(filters.regex("close_reply"))
 async def close_reply(msg, CallbackQuery):
     await CallbackQuery.message.delete()
     
