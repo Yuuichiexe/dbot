@@ -11,12 +11,13 @@ from pyrogram.types import (
 import DazaiRobot.modules.sql.global_bans_sql as sql
 from DazaiRobot import pbot as Client
 from DazaiRobot import (
-    DEVS,
-    Owner as owner_id,
-    OWNER_USERNAME as owner_usn,
+    DEV_USERS,
+    OWNER_ID as owner_id,
     SUPPORT_CHAT as log,
 )
 from DazaiRobot.utils.errors import capture_err
+
+OWNER_USERNAME = "adxymm"
 
 
 async def user_and_reason(RiZoeL, message):
