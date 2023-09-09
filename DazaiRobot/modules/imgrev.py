@@ -38,8 +38,6 @@ class STRINGS:
     
     RESULT: str = """
     <b>𝖱𝖾𝗌𝗎𝗅𝗍𝗌 𝖿𝗈𝗋</b> <code>{query}</code>
-
-    <b>𝖢𝗋𝖾𝖽𝗂𝗍𝗌:</b> @KangersNetwork
     """
     OPEN_PAGE: str = "⎋ 𝖫𝗂𝗇𝗄 ⎋"
 
