@@ -79,11 +79,19 @@ PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
 
-DAZAI_IMG = "https://te.legra.ph/file/35522fe621d4fa73b054a.jpg"
+Dazai_IMG = "https://te.legra.ph/file/35522fe621d4fa73b054a.jpg"
+
+DAZAI_IMAGE = (
+    "https://te.legra.ph/file/605617c796c6700d221cc.jpg"
+    "https://te.legra.ph/file/078e7110c19bc6a089a6f.jpg"
+    "https://te.legra.ph/file/d2db4423769af0c059e81.jpg"
+    "https://te.legra.ph/file/a10e6461d742219a1a7f6.jpg"
+    "https://te.legra.ph/file/57286057d10572c3391eb.jpg"
+)
 
 PM_START_TEXT = """ 
 𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
-𝖬𝗒𝗌𝖾𝗅𝖿 𝖽𝖺𝗓𝖺𝗂, 𝖠𝗇 𝖠𝖽𝗏𝖺𝗇𝖼𝖾 𝖺𝗇𝗂𝗆𝖾 𝗍𝗁𝖾𝗆𝖾𝖽 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉𝗌 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍𝗅𝗒[.](https://te.legra.ph/file/deb806eae84f281543dc2.jpg)
+𝖬𝗒𝗌𝖾𝗅𝖿 𝖽𝖺𝗓𝖺𝗂, 𝖠𝗇 𝖠𝖽𝗏𝖺𝗇𝖼𝖾 𝖺𝗇𝗂𝗆𝖾 𝗍𝗁𝖾𝗆𝖾𝖽 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉𝗌 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍𝗅𝗒.
  
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 ◎ 𝖧𝗂𝗍 𝗍𝗁𝖾 𝗁𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝗍𝗈 𝗄𝗇𝗈𝗐 𝗆𝗒 𝖺𝖻𝗂𝗅𝗂𝗍𝗂𝖾𝗌.
@@ -232,23 +240,23 @@ def start(update: Update, context: CallbackContext):
             lol.edit_text("⚡")
             time.sleep(0.4)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ.")
-            time.sleep(0.1)
+            time.sleep(0.0)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ..")
-            time.sleep(0.1)
+            time.sleep(0.0)
             lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ...")
-            time.sleep(0.1)
+            time.sleep(0.0)
             lol.delete()
             
             
             update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+                PM_START_TEXT.format(escape_markdown(first_name), random.choice(DAZAI_IMAGE), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
     else:
         update.effective_message.reply_photo(
-            DAZAI_IMG,
+            Dazai_IMG,
             caption="𝖨'𝗆 𝖺𝗅𝗂𝗏𝖾 𝖺𝗇𝖽 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝗉𝖾𝗋𝖿𝖾𝖼𝗍𝗅𝗒!\n<b>𝖨 𝖽𝗂𝖽𝗇'𝗍 𝗌𝗅𝖾𝗉𝗍 𝗌𝗂𝗇𝖼𝖾​:</b> <code>{}</code>".format(
                 uptime
             ),
@@ -421,7 +429,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
     elif query.data == "dazai_back":
         first_name = update.effective_user.first_name 
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), (PM_START_IMG), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), random.choice(DAZAI_IMAGE), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
@@ -459,7 +467,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏꜱᴇ ᴀɴ.ᴏᴘᴛɪᴏɴ ꜰᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ",
+            "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -468,12 +476,6 @@ def get_help(update: Update, context: CallbackContext):
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
-                        )
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
-                            callback_data="help_back",
                         )
                     ],
                 ]
