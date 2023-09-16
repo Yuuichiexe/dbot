@@ -82,14 +82,6 @@ PM_START_TEX = """
 
 Dazai_IMG = "https://te.legra.ph/file/35522fe621d4fa73b054a.jpg"
 
-DAZAI_IMAGE = (
-    "https://te.legra.ph/file/605617c796c6700d221cc.jpg"
-    "https://te.legra.ph/file/078e7110c19bc6a089a6f.jpg"
-    "https://te.legra.ph/file/d2db4423769af0c059e81.jpg"
-    "https://te.legra.ph/file/a10e6461d742219a1a7f6.jpg"
-    "https://te.legra.ph/file/57286057d10572c3391eb.jpg"
-)
-
 PM_START_TEXT = """ 
 𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
 𝖬𝗒𝗌𝖾𝗅𝖿 𝖽𝖺𝗓𝖺𝗂, 𝖠𝗇 𝖠𝖽𝗏𝖺𝗇𝖼𝖾 𝖺𝗇𝗂𝗆𝖾 𝗍𝗁𝖾𝗆𝖾𝖽 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉𝗌 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍𝗅𝗒[.](https://te.legra.ph/file/a10e6461d742219a1a7f6.jpg)
@@ -99,17 +91,15 @@ PM_START_TEXT = """
 """
 buttons = [
     [
-        InlineKeyboardButton(
-            text="⚓ sᴜᴍᴍᴏɴ ᴍᴇ ⚓",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-        ),
+                InlineKeyboardButton(text="ʜᴇʟᴘ ❔", callback_data="help_back"),
+                InlineKeyboardButton(text="ᴀɪ 🤖", callback_data="ai_help"),
     ],
     [
                 InlineKeyboardButton(text=" sᴜᴩᴩᴏʀᴛ 👥", url=f"https://t.me/{SUPPORT_CHAT}"),
                 InlineKeyboardButton(text=" ᴀʙᴏᴜᴛ 🗞️", callback_data="dazai_"),
     ],
     [
-                InlineKeyboardButton(text="❔ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs ❔", callback_data="help_back"),
+                InlineKeyboardButton(text="⚓ sᴜᴍᴍᴏɴ ᴍᴇ ⚓", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
     ],
 ]
 
@@ -250,7 +240,7 @@ def start(update: Update, context: CallbackContext):
             
             
             update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), random.choice(DAZAI_IMAGE), BOT_NAME),
+                PM_START_TEXT.format(escape_markdown(first_name), PM_START_IMG, BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -386,6 +376,37 @@ def help_button(update, context):
     except BadRequest:
         pass
 
+def about_ai_callback(update: Update, context: CallbackContext):
+    query= update.callback_query
+    if query.data == "ai_help":
+        query.message.edit_text(
+            text=f"""𝖠𝗋𝗍𝗂𝖿𝗂𝖼𝗂𝖺𝗅 𝖨𝗇𝗍𝖾𝗅𝗅𝗂𝗀𝖾𝗇𝖼𝖾 𝖥𝖾𝖺𝗍𝗎𝗋𝖾𝗌. 🤖
+-------------------------------------------------     
+• /aigen : 𝖦𝖾𝗇𝖾𝗋𝖺𝗍𝖾𝗌 𝗉𝗂𝖼𝗍𝗎𝗋𝖾 𝖻𝖺𝗌𝖾𝖽 𝗈𝗇 𝗀𝗂𝗏𝖾𝗇 𝗉𝗋𝗈𝗆𝗉𝗍.
+• /upscale : 𝗂𝗇𝖼𝗋𝖾𝖺𝗌𝖾 𝗊𝗎𝖺𝗅𝗂𝗍𝗒 𝗈𝖿 𝖺𝗇𝗒 𝗉𝗂𝖼𝗍𝗎𝗋𝖾.
+• /rmbg : 𝖱𝖾𝗆𝗈𝗏𝖾𝗌 𝗂𝗆𝖺𝗀𝖾 𝖻𝖺𝖼𝗄𝗀𝗋𝗈𝗎𝗇𝖽
+• /ask : 𝖥𝖺𝗌𝗍 𝖦𝖯𝖳4 𝖥𝗈𝗋 𝗋𝖾𝗌𝗉𝗈𝗇𝖽𝗂𝗇𝗀 𝗍𝗈 𝗎𝗌𝖾𝗋 𝗊𝗎𝖾𝗋𝗂𝖾𝗌.""",
+             parse_mode=ParseMode.MARKDOWN
+             disable_web_page_preview=True,
+             reply_markup=InlineKeyboardMarkup(
+                 [
+                     [
+                         InlineKeyboardButton(text="𝖡𝖺𝖼𝗄", callback_data="dazai_back"),
+                     ],
+                 ]
+             ),
+        )
+    elif query.data == "dazai_back":
+        first_name = update.effective_user.first_name 
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), PM_START_IMG, BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=False,
+        ) 
+                     
+
 
 def dazai_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
@@ -430,7 +451,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
     elif query.data == "dazai_back":
         first_name = update.effective_user.first_name 
         query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), random.choice(DAZAI_IMAGE), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), PM_START_IMG, BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
@@ -745,12 +766,14 @@ def main():
         dazai_about_callback, pattern=r"dazai_"
     )
 
+    ai_help_handler = CallbackQueryHandler(about_ai_callback, pattern=r"ai_help")
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
+    dispatcher.add_handler(ai_help_handler)
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
