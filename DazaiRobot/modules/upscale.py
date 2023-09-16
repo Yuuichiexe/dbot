@@ -8,7 +8,7 @@ from pyrogram import filters , Client
 
 #BOT FILE IMPORTS
 #Name -> Your Bots File Name (Eg. From Liaa import pbot as app)
-from Itachi import app
+from DazaiRobot import pbot as app
 
 
 @Client.on_message(filters.command("upscale"))
