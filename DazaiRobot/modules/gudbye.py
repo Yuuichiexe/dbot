@@ -31,7 +31,7 @@ async def left_member_handler(client, message):
 
     s1 = stark[0].size[0] // 2
     s2 = 290
-    font = ImageFont.truetype(font_path, 30)
+    font = ImageFont.truetype(font_path, 22)
     s3 = math.ceil(len(stark) / len(text))
 
     for i in range(len(stark)):
