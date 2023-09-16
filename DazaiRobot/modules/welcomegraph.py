@@ -20,7 +20,7 @@ async def welcome(_, message):
             image_height = 720
             
             # Load the custom welcome template image
-            welcome_image = Image.open("DazaiRobot/resources/Picsart_23-09-16_14-27-36-755.png")
+            welcome_image = Image.open("DazaiRobot/resources/Picsart_23-09-16_22-42-41-918.png")
             welcome_image = welcome_image.resize((image_width, image_height))
             
             # Load and resize the new user's profile picture
@@ -38,18 +38,18 @@ async def welcome(_, message):
             welcome_with_profile_pic.paste(welcome_image, (0, 0))
             
             # Draw the group name at the top with capital letters
-            group_name = message.chat.title.upper()
-            draw = ImageDraw.Draw(welcome_with_profile_pic)
-            group_name_font = get_bold_font(50)
-            group_name_width, group_name_height = draw.textsize(group_name, font=group_name_font)
-            group_name_position = ((image_width - group_name_width) // 2, 50)
-            draw.text(group_name_position, group_name, fill="black", font=group_name_font)
+            #group_name = message.chat.title.upper()
+            #draw = ImageDraw.Draw(welcome_with_profile_pic)
+            #group_name_font = get_bold_font(50)
+            #group_name_width, group_name_height = draw.textsize(group_name, font=group_name_font)
+            #group_name_position = ((image_width - group_name_width) // 2, 50)
+            #draw.text(group_name_position, group_name, fill="black", font=group_name_font)
             
             # Draw the username on the welcome image
             draw = ImageDraw.Draw(welcome_with_profile_pic)
             font_size = 35
             font = ImageFont.truetype("DazaiRobot/resources/SuisseIntl-Regular.ttf", font_size)
-            username_text = f"Name: {user.first_name}!"
+            username_text = f"ɴᴀᴍᴇ: {user.first_name}!"
             text_width, text_height = draw.textsize(username_text, font=font)
             text_position = ((image_width - text_width) // 2, profile_pic_position[1] + profile_pic_size[1] + 20)
             draw.text(text_position, username_text, fill="black", font=font)
