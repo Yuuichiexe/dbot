@@ -74,7 +74,7 @@ async def welcome(_, message):
             
             # Specify the welcome message
             msg = f"""
-**Hey! {user.mention}**, Welcome to {message.chat.title}! 🤍
+**ʜᴇʏ! {user.mention}**, ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {message.chat.title}! 🤍
 """
             
             # Reply to the message with the custom welcome image and caption
