@@ -6,7 +6,7 @@ from DazaiRobot import pbot as app
 
 # Function to create a bold font
 def get_bold_font(size):
-    return ImageFont.truetype("DazaiRobot/resources/Vampire_Wars.ttf", size)
+    return ImageFont.truetype("DazaiRobot/resources/SuisseIntl-Regular.ttf", size)
 
 @app.on_message(filters.new_chat_members & filters.group)
 async def welcome(_, message):
@@ -20,7 +20,7 @@ async def welcome(_, message):
             image_height = 720
             
             # Load the custom welcome template image
-            welcome_image = Image.open("DazaiRobot/resources/Untitled5_20230808001129.png")
+            welcome_image = Image.open("DazaiRobot/resources/Picsart_23-09-16_14-27-36-755.png")
             welcome_image = welcome_image.resize((image_width, image_height))
             
             # Load and resize the new user's profile picture
@@ -48,7 +48,7 @@ async def welcome(_, message):
             # Draw the username on the welcome image
             draw = ImageDraw.Draw(welcome_with_profile_pic)
             font_size = 35
-            font = ImageFont.truetype("DazaiRobot/resources/Big Space.otf", font_size)
+            font = ImageFont.truetype("DazaiRobot/resources/SuisseIntl-Regular.ttf", font_size)
             username_text = f"Name: {user.first_name}!"
             text_width, text_height = draw.textsize(username_text, font=font)
             text_position = ((image_width - text_width) // 2, profile_pic_position[1] + profile_pic_size[1] + 20)
