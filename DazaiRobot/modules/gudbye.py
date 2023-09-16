@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 from unidecode import unidecode
 
 font_path = "./DazaiRobot/resources/SuisseIntl-Regular.ttf"
-gif_path = "./DazaiRobot/resources/2fb6be072529d7ecbed3a1ba4836ba27.gif"
+gif_path = "./DazaiRobot/resources/sumi-sakurasawa-rent-a-girlfriend.gif"
 
 @Client.on_message(filters.left_chat_member)
 async def left_member_handler(client, message):
