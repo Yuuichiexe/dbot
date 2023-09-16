@@ -2,7 +2,7 @@ import os
 import aiohttp
 import aiofiles
 from aiohttp import ContentTypeError
-from Itachi import app
+from DazaiRobot import pbot as app
 from pyrogram import filters
 
 def check_filename(filroid):
@@ -56,13 +56,8 @@ async def rmbg(bot, message):
   await rmbg.edit("**Reply only to a photo to Remove it's Background**")
 
 
-__help__= """
-*Available commands:*
 
-/rmbg - reply image
-"""
-
-__mod_name__ = "Remove BG 💫"   
+__mod_name__ = "Remove Bg"   
 __command_list__ = [
     "rmbg",
       ]
