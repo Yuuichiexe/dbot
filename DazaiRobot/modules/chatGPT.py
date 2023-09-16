@@ -1,4 +1,4 @@
-from Itachi import app
+from DazaiRobot import pbot as app
 import requests
 from pyrogram import *
 
