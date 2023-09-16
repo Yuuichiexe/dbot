@@ -4,11 +4,11 @@
 
 #IMPORTS
 import httpx, base64
-from pyrogram import filters , Client
+from pyrogram import filters
 
 #BOT FILE IMPORTS
 #Name -> Your Bots File Name (Eg. From Liaa import pbot as app)
-from DazaiRobot import pbot as app
+from DazaiRobot import pbot as Client
 
 
 @Client.on_message(filters.command("upscale"))
