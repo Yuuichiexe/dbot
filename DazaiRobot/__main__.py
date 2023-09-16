@@ -386,7 +386,7 @@ def about_ai_callback(update: Update, context: CallbackContext):
 • /upscale : 𝗂𝗇𝖼𝗋𝖾𝖺𝗌𝖾 𝗊𝗎𝖺𝗅𝗂𝗍𝗒 𝗈𝖿 𝖺𝗇𝗒 𝗉𝗂𝖼𝗍𝗎𝗋𝖾.
 • /rmbg : 𝖱𝖾𝗆𝗈𝗏𝖾𝗌 𝗂𝗆𝖺𝗀𝖾 𝖻𝖺𝖼𝗄𝗀𝗋𝗈𝗎𝗇𝖽
 • /ask : 𝖥𝖺𝗌𝗍 𝖦𝖯𝖳4 𝖥𝗈𝗋 𝗋𝖾𝗌𝗉𝗈𝗇𝖽𝗂𝗇𝗀 𝗍𝗈 𝗎𝗌𝖾𝗋 𝗊𝗎𝖾𝗋𝗂𝖾𝗌.""",
-             parse_mode=ParseMode.MARKDOWN
+             parse_mode=ParseMode.MARKDOWN,
              disable_web_page_preview=True,
              reply_markup=InlineKeyboardMarkup(
                  [
