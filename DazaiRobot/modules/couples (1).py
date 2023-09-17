@@ -14,7 +14,7 @@ from pyrogram.enums import *
 #BOT FILE NAME
 from DazaiRobot import pbot as app
 from DazaiRobot.Config import COMMAND_HANDLER
-from DazaiRobot.modules.couples_db import _get_image, get_couple, save_couple
+from DazaiRobot.modules.mongo.couples_db import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()
@@ -36,7 +36,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@app.on_message(filters.command("couples", COMMAND_HANDLER))
+@app.on_message(filters.command(["couple","couples","shipping"]) & ~filters.private)
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -44,7 +44,7 @@ async def ctest(_, message):
     try:
        is_selected = await get_couple(cid, today)
        if not is_selected:
-         msg = await message.reply_text("Generating Couples Image...")
+         msg = await message.reply_text("**Generating Couples Image...**")
          #GET LIST OF USERS
          list_of_users = []
 
