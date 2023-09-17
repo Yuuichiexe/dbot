@@ -1,24 +1,23 @@
 from pyrogram import filters
 from pyrogram.types import InlineQueryResultPhoto, InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultArticle, InputTextMessageContent
 from pyrogram import enums
-from HuTao import app, LOG_CHANNEL_ID
-from HuTao.Config import COMMAND_HANDLER
+from DazaiRobot import pbot as app, EVENT_LOGS
 
 
-@app.on_message(filters.command("whisper", COMMAND_HANDLER))
+@app.on_message(filters.command("whisper"))
 async def startmsg(app, message):
    text = f"""
 👋 Hi {message.from_user.mention}
 
 ❓ How to use this bot in inline:
 
-`@{app.me.username} Hi @KIRITO1240`
+`@{app.me.username} Hi @Anonymous`
 `@{app.me.username} Hi @all`
 
 """
    key = InlineKeyboardMarkup (
      [[
-       InlineKeyboardButton ("TRY NOW", switch_inline_query='Hi @KIRITO1240') ]]
+       InlineKeyboardButton ("TRY NOW", switch_inline_query='Hi @Anonymous') ]]
    )
    await message.reply(text, reply_markup=key, quote=True)
 
@@ -50,7 +49,7 @@ async def whisper(app, iquery):
       results=[
        InlineQueryResultArticle(
           title=f"📪 Send whisper for {username}",
-          url="http://t.me/NovaXNetwork",
+          url="http://t.me/daxai_support",
           input_message_content=InputTextMessageContent(
             message_text=text,
             parse_mode=enums.ParseMode.MARKDOWN 
@@ -66,16 +65,16 @@ async def whisper(app, query):
     text = f"""
 ❓ How to use this bot in inline:
 
-@{app.me.username} Hi @KIRITO1240
+@{app.me.username} Hi @Anonymous
 @{app.me.username} Hi @all
 """
     await query.answer(
         results=[
             InlineQueryResultPhoto(
                 title="🔒 Type the whisper + username",
-                photo_url='https://t.me/KIRITO1240',
-                description=f'@{app.me.username} Hello @KIRITO120',
-                reply_markup=InlineKeyboardMarkup ([[InlineKeyboardButton ("🔗", url='t.me/NovaXNetwork')]]),
+                photo_url='https://t.me/adxymm',
+                description=f'@{app.me.username} Hello @Anonymous',
+                reply_markup=InlineKeyboardMarkup ([[InlineKeyboardButton ("🔗", url='t.me/daxai_support')]]),
                 input_message_content=InputTextMessageContent(text)
             ),
         ],
@@ -110,7 +109,7 @@ async def get_whisper(app,query):
     
     else:
       if str(query.from_user.id) == user:
-        msg = await app.get_messages(LOG_CHANNEL_ID, int(query.data.split("catch")[0]))
+        msg = await app.get_messages(EVENT_LOGS, int(query.data.split("catch")[0]))
         await query.answer(msg.text, show_alert=True)
         try:
          await query.edit_message_reply_markup(
@@ -121,7 +120,7 @@ async def get_whisper(app,query):
         return 
 
       if query.from_user.id == from_user:
-        msg = await app.get_messages(LOG_CHANNEL_ID, int(query.data.split("catch")[0]))
+        msg = await app.get_messages(EVENT_LOGS, int(query.data.split("catch")[0]))
         await query.answer(msg.text, show_alert=True)
         return
       
@@ -138,7 +137,7 @@ async def del_whisper(app,query):
    else:
      reply_markup = InlineKeyboardMarkup(
       [[
-        InlineKeyboardButton("DEV. 🔗", url="https://t.me/KIRITO1240")
+        InlineKeyboardButton("DEV. 🔗", url="https://t.me/adxymm")
       ]]
     )
      await query.edit_message_text(f"**🗑️ This whisper was deleted by ( {query.from_user.mention} ) .**",
