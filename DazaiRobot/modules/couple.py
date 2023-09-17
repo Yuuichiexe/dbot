@@ -43,11 +43,11 @@ async def ctest(_, message):
     try:
        is_selected = await get_couple(cid, today)
        if not is_selected:
-         msg = await message.reply_text("**Generating Couples Image...**")
+         msg = await message.reply_text("**Getting todays couples...**")
          #GET LIST OF USERS
          list_of_users = []
 
-         async for i in app.get_chat_members(message.chat.id, limit=50):
+         async for i in app.get_chat_members(message.chat.id, limit=10):
              if not i.user.is_bot:
                list_of_users.append(i.user.id)
 
@@ -77,16 +77,16 @@ async def ctest(_, message):
 
          img = Image.open("DazaiRobot/resources/a.png")
 
-         img1 = img1.resize((320,320))
-         img2 = img2.resize((320,320))
+         img1 = img1.resize((505,505))
+         img2 = img2.resize((505,505))
 
          mask = Image.new('L', img1.size, 0)
          draw = ImageDraw.Draw(mask) 
-         draw.ellipse((0, 0) + img1.size, fill=255)
+         draw.ellipse((0, 0) + img1.size, fill=650)
 
          mask1 = Image.new('L', img2.size, 0)
          draw = ImageDraw.Draw(mask1) 
-         draw.ellipse((0, 0) + img2.size, fill=255)
+         draw.ellipse((0, 0) + img2.size, fill=650)
 
 
          img1.putalpha(mask)
@@ -94,17 +94,15 @@ async def ctest(_, message):
 
          draw = ImageDraw.Draw(img)
 
-         img.paste(img1, (90, 200), img1)
-         img.paste(img2, (871, 200), img2)
+         img.paste(img1, (129, 295), img1)
+         img.paste(img2, (1295, 295), img2)
 
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**TODAY'S SELECTED COUPLES 🎉 :
-➖➖➖➖➖➖➖➖➖➖➖➖
-{N1} + {N2} = ❣️
-➖➖➖➖➖➖➖➖➖➖➖➖
-NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
+**💌 ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ:**
+{N1} + {N2} = 💘
+`ɴᴇᴡ ᴄᴏᴜᴘʟᴇ ᴏf ᴛʜᴇ ᴅᴀʏ ᴄᴀɴ ʙᴇ ᴄʜᴏsᴇɴ ᴀᴛ 12AM {tomorrow}`
 """
     
          await message.reply_photo(f"test_{cid}.png", caption=TXT)
@@ -123,13 +121,13 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
          c2_id = int(is_selected["c2_id"])
          c1_name = (await app.get_users(c1_id)).first_name
          c2_name = (await app.get_users(c2_id)).first_name
+         c1_mention = (await _.get_users(c1_id)).mention 
+         c2_mention = (await _.get_users(c2_id)).mention
          
          TXT = f"""
-**TODAY'S SELECTED COUPLES 🎉 :
-➖➖➖➖➖➖➖➖➖➖➖➖
-[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
-➖➖➖➖➖➖➖➖➖➖➖➖
-NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
+**💌 ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ:**
+{c1_mention} + {c2_mention} = 💘
+`ɴᴇᴡ ᴄᴏᴜᴘʟᴇ ᴏf ᴛʜᴇ ᴅᴀʏ ᴄᴀɴ ʙᴇ ᴄʜᴏsᴇɴ ᴀᴛ 12AM {tomorrow}`
 """
          await message.reply_photo(b, caption=TXT)
          await msg.delete()
