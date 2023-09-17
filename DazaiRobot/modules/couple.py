@@ -66,16 +66,16 @@ async def ctest(_, message):
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "HuTao/resources/profilepic.jpg"
+            p1 = "DazaiRobot/resources/profilepic.jpg"
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "HuTao/resources/profilepic.jpg"
+            p2 = "DazaiRobot/resources/profilepic.jpg"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("HuTao/resources/a.png")
+         img = Image.open("DazaiRobot/resources/a.png")
 
          img1 = img1.resize((320,320))
          img2 = img2.resize((320,320))
@@ -117,7 +117,7 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
     
          
        elif is_selected:
-         msg = await message.reply_text("Getting Todays Couples Image...")
+         msg = await message.reply_text("**Getting Todays Couples...**")
          b = await _get_image(cid)
          c1_id = int(is_selected["c1_id"])
          c2_id = int(is_selected["c2_id"])
@@ -143,7 +143,7 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
        pass
          
 
-__mod__ = "COUPLES"
+__mod__ = "𝙲ᴏᴜᴘʟᴇs"
 __help__ = """
 **» /couples** - Get Todays Couples Of The Group In Interactive View
 """
