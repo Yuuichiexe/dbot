@@ -12,9 +12,9 @@ from pyrogram.types import *
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from HuTao import app
-from HuTao.Config import COMMAND_HANDLER
-from HuTao.database.couples_db import _get_image, get_couple, save_couple
+from DazaiRobot import pbot as app
+from DazaiRobot.Config import COMMAND_HANDLER
+from DazaiRobot.modules.couples_db import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()
