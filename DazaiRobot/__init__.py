@@ -39,7 +39,7 @@ if ENV:
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
     CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
-    DB_URI = os.environ.get("DATABASE_URL")
+    DB_URI = os.environ.get("DATABASE_URL", "postgres://bhxpvlqk:sIoqj9-Lh1_huA4SS4jq1nBNMzMSfY50@trumpet.db.elephantsql.com/bhxpvlqk")
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
@@ -52,7 +52,7 @@ if ENV:
     )
     PM_START_IMG = os.environ.get("PM_START_IMG", None)
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "DevilsHeavenMF")
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "daxai_support")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
@@ -99,7 +99,7 @@ else:
     ALLOW_CHATS = Config.ALLOW_CHATS
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
-    DB_URI = Config.SQLALCHEMY_DATABASE_URI
+    DB_URI = "postgres://bhxpvlqk:sIoqj9-Lh1_huA4SS4jq1nBNMzMSfY50@trumpet.db.elephantsql.com/bhxpvlqk"
     DEL_CMDS = Config.DEL_CMDS
     EVENT_LOGS = Config.EVENT_LOGS
     INFOPIC = Config.INFOPIC
