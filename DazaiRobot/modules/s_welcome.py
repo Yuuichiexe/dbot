@@ -39,7 +39,7 @@ async def get_welcome_img(
 
         
     img_draw.text(
-        (1426, 882),
+        (1426, 879),
         text=str(user_id).upper(),
         font=get_font(90, font_path),
         fill=(275, 275, 275),
