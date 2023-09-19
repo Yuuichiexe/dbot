@@ -62,7 +62,7 @@ bg_path = "./DazaiRobot/resources/Picsart_23-09-18_23-41-29-273.png"
 font_path = "./DazaiRobot/resources/Hiroko.ttf"
 
 WELCOME_TEXT = """
-**ᴡᴇʟᴄᴏᴍᴇ** {name} 🤍
+**ᴡᴇʟᴄᴏᴍᴇ** {user.mention} 🤍
 **ᴛʜᴀɴᴋs ғᴏʀ ᴊᴏɪɴɪɴɢ ** **{chat_title}!**
 """
 
