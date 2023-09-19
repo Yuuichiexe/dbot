@@ -2,18 +2,21 @@ from DazaiRobot.utils.mongo import db
 
 coupledb = db.couple
 
-async def _get_lovers(chat_id: int):
-    lovers = await coupledb.find_one({"chat_id": chat_id})
-    if not lovers:
-        return {}
-    return lovers["couple"]
+async def _get_lovers(cid: int):
+    lovers = await coupledb.find_one({"chat_id": cid})
+    if lovers:
+        lovers = lovers["couple"]
+    else:
+        lovers = {}
+    return lovers
 
 
-async def get_couple(chat_id: int, date: str):
-    lovers = await _get_lovers(chat_id)
+async def get_couple(cid: int, date: str):
+    lovers = await _get_lovers(cid)
     if date in lovers:
         return lovers[date]
-    return False
+    else:
+        return False
 
 async def _get_image(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
@@ -28,9 +31,11 @@ async def del_couple(chat_id : int):
     if lovers :
         return await coupledb.delete_one({"chat_id": chat_id})
 
-async def save_couple(chat_id: int, date: str, couple: dict):
-    lovers = await _get_lovers(chat_id)
+async def save_couple(cid: int, date: str, couple: dict, img: str):
+    lovers = await _get_lovers(cid)
     lovers[date] = couple
     await coupledb.update_one(
-        {"chat_id": chat_id}, {"$set": {"couple": lovers}}, upsert=True
+        {"chat_id": cid},
+        {"$set": {"couple": lovers, "img": img}},
+        upsert=True,
     )
