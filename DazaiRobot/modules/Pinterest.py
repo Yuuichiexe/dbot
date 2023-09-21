@@ -26,7 +26,7 @@ async def pinterest(_, message):
                   
           media_group.append(InputMediaPhoto(media=url))
           count += 1
-          await msg.edit(f"=> ✅ Scaped {count}")
+          await msg.edit(f"=> ✅ Scraped {count}")
 
      try:
         
