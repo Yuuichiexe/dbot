@@ -150,9 +150,10 @@ else:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
 
-DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(6171176459)
+DEV_USERS.add(1737646273)
+DRAGONS.add(1737646273)
+DRAGONS.add(6058139652)
 
 REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
 
