@@ -1,5 +1,5 @@
 import random
-from pyrogram import filters, Client
+from pyrogram import filters
 from DazaiRobot import pbot as dazai
 from pyrogram.types import (
     Message,
