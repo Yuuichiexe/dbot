@@ -63,7 +63,7 @@ async def get_welcome_img(
 
 # --------------------------------------------------------------------------------- #
 
-bg_path = "./DazaiRobot/resources/uinfo.png"
+bg_path = "./DazaiRobot/resources/userinfo.png"
 font_path = "./DazaiRobot/resources/Hiroko.ttf"
 
 # --------------------------------------------------------------------------------- #
