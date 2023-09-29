@@ -69,7 +69,7 @@ WELCOME_TEXT = """
 
 DEL_AFTER_WELCOME = False  
 
-@Hiroko.on_message(filters.new_chat_members, group=3)
+@Hiroko.on_chat_member_updated(filters.group)
 async def _greet(client, message):
     chat = message.chat
     my_id = client.me.id
