@@ -58,7 +58,7 @@ async def get_welcome_img(
     return path
 
 
-bg_path = "./DazaiRobot/resources/Picsart_23-09-18_23-41-29-273.png"
+bg_path = "./DazaiRobot/resources/twelcome.png"
 font_path = "./DazaiRobot/resources/Hiroko.ttf"
 
 WELCOME_TEXT = """
