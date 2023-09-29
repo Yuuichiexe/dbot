@@ -1,6 +1,6 @@
 import random
 from pyrogram import filters
-from DazaiRobot import pbot as dazai
+from DazaiRobot import pbot
 from pyrogram.types import (
     Message,
     CallbackQuery,
@@ -16,12 +16,12 @@ photo = [
 ]
 
 
-@dazai.on_message(filters.new_chat_members, group=2)
-async def _kk(dazai, message):
+@pbot.on_message(filters.new_chat_members, group=3)
+async def _kk(DazaiRobot, message):
     chat = message.chat
     for members in message.new_chat_members:
         if members.id == 1711510822:
-            count = await dazai.get_chat_members_count(chat.id)
+            count = await pbot.get_chat_members_count(chat.id)
 
             msg = (
                 f"❗ 𝖴𝗐𝗎 𝗌𝗈𝗆𝖾𝗈𝗇𝖾 𝖺𝖽𝖽𝖾𝖽 𝗆𝖾 𝗂𝗇 𝗇𝖾𝗐 𝗀𝗋𝗈𝗎𝗉 ❗\n\n"
@@ -30,4 +30,4 @@ async def _kk(dazai, message):
                 f"◉ 𝖢𝗁𝖺𝗍 𝖭𝖺𝗆𝖾: {message.chat.title}\n"
                 f"◉ 𝖬𝖾𝗆𝖻𝖾𝗋𝗌 𝖼𝗈𝗎𝗇𝗍: {count}"
             )
-            await dazai.send_photo(-1001985765132, photo=random.choice(photo), caption=msg, reply_markup=button)
+            await pbot.send_photo(-1001985765132, photo=random.choice(photo), caption=msg, reply_markup=button)
