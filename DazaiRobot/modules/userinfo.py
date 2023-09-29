@@ -226,21 +226,21 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"ㅤ ㅤㅤ      ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n•❅────────────────❅•\n"
-        f"❖ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-        f"❖ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
+        f"ㅤ ㅤㅤ      ⋊ 𝗨𝗦𝗘𝗥 𝗜𝗡𝗙𝗢 ⋉\n➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n"
+        f"◍ <b>𝖴𝗌𝖾𝗋 𝖨𝖣:</b> <code>{user.id}</code>\n"
+        f"◍ <b>𝖥𝗂𝗋𝗌𝗍 𝖭𝖺𝗆𝖾:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n❖ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
+        text += f"\n◍ <b>𝖫𝖺𝗌𝗍 𝖭𝖺𝗆𝖾:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n❖ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
+        text += f"\n◍ <b>𝖴𝗌𝖾𝗋𝗇𝖺𝗆𝖾:</b> @{html.escape(user.username)}"
 
-    text += f"\n❖ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
+    text += f"\n◍ <b>𝖯𝗋𝗈𝖿𝗂𝗅𝖾 𝖫𝗂𝗇𝗄:</b> {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
+        _stext = "\n◍ <b>𝖯𝗋𝖾𝗌𝖾𝗇𝖼𝖾:</b> <code>{}</code>"
 
         status = status = bot.get_chat_member(chat.id, user.id).status
         if status:
@@ -252,7 +252,7 @@ def info(update: Update, context: CallbackContext):
                 text += _stext.format("ᴀᴅᴍɪɴ")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>`𝖧𝖾𝖺𝗅𝗍𝗁`:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     if user.id == OWNER_ID:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ɢᴏᴅ</b>.\n"
@@ -276,7 +276,7 @@ def info(update: Update, context: CallbackContext):
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result["custom_title"]
-                text += f"\n\nᴛɪᴛʟᴇ:\n<b>{custom_title}</b>"
+                text += f"\n\n𝖳𝗂𝗍𝗅𝖾:\n<b>{custom_title}</b>"
     except BadRequest:
         pass
 
@@ -301,10 +301,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/Daxai_Updates/5"
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/DazaiXHatake_Updates/5"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/Daxai_Updates/7"
+                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/DazaiXHatake_Updates/7"
                             ),
                         ],
                     ]
