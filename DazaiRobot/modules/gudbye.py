@@ -9,7 +9,7 @@ from unidecode import unidecode
 font_path = "./DazaiRobot/resources/SuisseIntl-Regular.ttf"
 gif_path = "./DazaiRobot/resources/sumi-sakurasawa-rent-a-girlfriend.gif"
 
-@Client.on_message(filters.left_chat_member)
+@Client.on_message(filters.left_chat_member & filters.group)
 async def left_member_handler(client, message):
     first_name = unidecode(message.left_chat_member.first_name)
  
