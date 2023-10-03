@@ -12,7 +12,7 @@ from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboard
 
 from DazaiRobot import SUDO_USERS
 from DazaiRobot import pbot
-from DazaiRobot.modules.sql import forceSubscribe_sql as sql
+from DazaiRobot.modules.sql import fsub_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
