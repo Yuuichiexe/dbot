@@ -10,7 +10,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from DazaiRobot import SUDO_USERS
+from DazaiRobot import DRAGONS as SUDO_USERS
 from DazaiRobot import pbot
 from DazaiRobot.modules.sql import fsub_sql as sql
 
