@@ -442,7 +442,7 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="𝖮𝗐𝗇𝖾𝗋 👤", url=f"tg://user?id={OWNER_ID}"
-                        ),,
+                        ),
                     ],
                     [
                         InlineKeyboardButton(text=" Back 🔙", callback_data="dazai_back"),
