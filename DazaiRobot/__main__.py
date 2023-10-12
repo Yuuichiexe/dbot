@@ -80,26 +80,22 @@ PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`, ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
 """
 
-Dazai_IMG = "https://te.legra.ph/file/35522fe621d4fa73b054a.jpg"
+Dazai_IMG = "https://te.legra.ph/file/94e071dec4e21b5ffd163.jpg"
 
 PM_START_TEXT = """ 
-𝖪𝗈𝗇𝗇𝗂𝖼𝗁𝗂𝗐𝖺 {}, [💌]({})
-𝖬𝗒𝗌𝖾𝗅𝖿 𝖽𝖺𝗓𝖺𝗂, 𝖠𝗇 𝖠𝖽𝗏𝖺𝗇𝖼𝖾 𝖺𝗇𝗂𝗆𝖾 𝗍𝗁𝖾𝗆𝖾𝖽 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉𝗌 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍𝗅𝗒.
- 
+Konnichiwa {}, [💌]({})
+Myself *dazai*, An Advance group management bot.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-◎ 𝖧𝗂𝗍 𝗍𝗁𝖾 𝗁𝖾𝗅𝗉 𝖻𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝗍𝗈 𝗄𝗇𝗈𝗐 𝗆𝗒 𝖺𝖻𝗂𝗅𝗂𝗍𝗂𝖾𝗌.
+◎ Hit the help button below to know more.
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 buttons = [
     [
                 InlineKeyboardButton(text="ʜᴇʟᴘ ❔", callback_data="help_back"),
-                InlineKeyboardButton(text="ᴀɪ 🤖", callback_data="ai_help"),
-    ],
-    [
-                InlineKeyboardButton(text=" sᴜᴩᴩᴏʀᴛ 👥", url=f"https://t.me/{SUPPORT_CHAT}"),
                 InlineKeyboardButton(text=" ᴀʙᴏᴜᴛ 🗞️", callback_data="dazai_"),
     ],
     [
-                InlineKeyboardButton(text="⚓ sᴜᴍᴍᴏɴ ᴍᴇ ⚓", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                InlineKeyboardButton(text="⚓ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚓", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
     ],
 ]
 
@@ -422,26 +418,21 @@ def dazai_about_callback(update: Update, context: CallbackContext):
     if query.data == "dazai_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"""𝖨'𝗆 𝖺𝗇 𝗉𝗈𝗐𝖾𝗋𝖿𝗎𝗅 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗁𝖾𝗅𝗉 𝗒𝗈𝗎 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉 𝖾𝖺𝗌𝗂𝗅𝗒. 🍂
+            text=f"""💭 𝖨'𝗆 *𝖽𝖺𝗓𝖺𝗂*, 𝖺𝗇 𝗉𝗈𝗐𝖾𝗋𝖿𝗎𝗅 𝗀𝗋𝗈𝗎𝗉 𝗆𝖺𝗇𝖺𝗀𝖾𝗆𝖾𝗇𝗍 𝖻𝗈𝗍 𝖻𝗎𝗂𝗅𝗍 𝗍𝗈 𝗁𝖾𝗅𝗉 𝗒𝗈𝗎 𝗆𝖺𝗇𝖺𝗀𝖾 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉 𝖾𝖺𝗌𝗂𝗅𝗒.
 ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-» 𝖨 𝖼𝖺𝗇 𝗋𝖾𝗌𝗍𝗋𝗂𝖼𝗍 𝗎𝗌𝖾𝗋𝗌.
-
-» 𝖨 𝖼𝖺𝗇 𝗀𝗋𝖾𝖾𝗍 𝗎𝗌𝖾𝗋𝗌 𝗐𝗂𝗍𝗁 𝖼𝗎𝗌𝗍𝗈𝗆𝗂𝗓𝖺𝖻𝗅𝖾 𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖺𝗇𝖽 𝖾𝗏𝖾𝗇 𝗌𝖾𝗍 𝖺 𝗀𝗋𝗈𝗎𝗉'𝗌 𝗋𝗎𝗅𝖾𝗌.
-
-» 𝖨 𝗁𝖺𝗏𝖾 𝖺𝗇 𝖺𝖽𝗏𝖺𝗇𝖼𝖾𝖽 𝖺𝗇𝗍𝗂-𝖿𝗅𝗈𝗈𝖽 𝗌𝗒𝗌𝗍𝖾𝗆.
-
-» 𝖨 𝖼𝖺𝗇 𝗐𝖺𝗋𝗇 𝗎𝗌𝖾𝗋𝗌 𝗎𝗇𝗍𝗂𝗅 𝗍𝗁𝖾𝗒 𝗋𝖾𝖺𝖼𝗁 𝗆𝖺𝗑 𝗐𝖺𝗋𝗇𝗌, 𝗐𝗂𝗍𝗁 𝖾𝖺𝖼𝗁 𝗉𝗋𝖾𝖽𝖾𝖿𝗂𝗇𝖾𝖽 𝖺𝖼𝗍𝗂𝗈𝗇𝗌 𝗌𝗎𝖼𝗁 𝖺𝗌 𝖻𝖺𝗇, 𝗆𝗎𝗍𝖾, 𝗄𝗂𝖼𝗄, 𝖾𝗍𝖼.
-
-» 𝖨 𝗁𝖺𝗏𝖾 𝖺 𝗇𝗈𝗍𝖾 𝗄𝖾𝖾𝗉𝗂𝗇𝗀 𝗌𝗒𝗌𝗍𝖾𝗆, 𝖻𝗅𝖺𝖼𝗄𝗅𝗂𝗌𝗍𝗌, 𝖺𝗇𝖽 𝖾𝗏𝖾𝗇 𝗉𝗋𝖾𝖽𝖾𝗍𝖾𝗋𝗆𝗂𝗇𝖾𝖽 𝗋𝖾𝗉𝗅𝗂𝖾𝗌 𝗈𝗇 𝖼𝖾𝗋𝗍𝖺𝗂𝗇 𝗄𝖾𝗒𝗐𝗈𝗋𝖽𝗌.
-
-» 𝖨 𝖼𝗁𝖾𝖼𝗄 𝖿𝗈𝗋 𝖺𝖽𝗆𝗂𝗇𝗌' 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇𝗌 𝖻𝖾𝖿𝗈𝗋𝖾 𝖾𝗑𝖾𝖼𝗎𝗍𝗂𝗇𝗀 𝖺𝗇𝗒 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝖺𝗇𝖽 𝗆𝗈𝗋𝖾 𝗌𝗍𝗎𝖿𝖿𝗌.""",
+◎ I can restrict users.
+◎ I can greet users with customizable welcome messages and even set a group's rules.
+◎ I have an advanced anti-flood system.
+◎ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+◎ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+◎ I check for admins'permissions before executing any command and more stuffs.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝖮𝗐𝗇𝖾𝗋 👤", url=f"tg://user?id={OWNER_ID}"
+                            text=" sᴜᴩᴩᴏʀᴛ 👥", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
                             text="𝖴𝗉𝖽𝖺𝗍𝖾𝗌 💢", 
@@ -449,10 +440,12 @@ def dazai_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="❗ 𝖳𝖾𝗋𝗆𝗌 𝖺𝗇𝖽 𝖢𝗈𝗇𝖽𝗂𝗍𝗂𝗈𝗇𝗌 ❗", url=f"https://telegra.ph/Dazai-08-20-2"),
+                        InlineKeyboardButton(
+                            text="𝖮𝗐𝗇𝖾𝗋 👤", url=f"tg://user?id={OWNER_ID}"
+                        ),,
                     ],
                     [
-                        InlineKeyboardButton(text="𝖡𝖺𝖼𝗄", callback_data="dazai_back"),
+                        InlineKeyboardButton(text=" Back 🔙", callback_data="dazai_back"),
                     ],
                 ]
             ),
