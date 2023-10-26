@@ -59,11 +59,16 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+PM_START_TEX = """
+Hello {} wait a min bro...
+"""
+
 PM_START_TEXT = """
 Konnichiwa {}, [💌]({})
 Myself *dazai*, An Advance group management bot.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 ◎ Hit the help button below to know more.
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 buttons = [
@@ -96,7 +101,7 @@ HELP_STRINGS = """
 
 TEXXT = "I Am Alive And Working Fine.\nCheck Out The Buttons Mentioned Below.",
 
-PM_PHOTO = "https://te.legra.ph/file/9e1d9e4b4de115f46cd8d.jpg"
+PM_PHOTO = "https://te.legra.ph/file/1a2f884e7f33bc926536a.jpg"
 
 DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator's Network @BontenNetwork"""
 
@@ -217,8 +222,24 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.full_name
-            id = update.effective_user.id
 
+            usr = update.effective_user
+            lol = update.effective_message.reply_text(
+                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
+            )
+                      
+            time.sleep(0.0)
+            lol.edit_text("⚡")
+            time.sleep(0.2)            
+            lol.edit_text("ᴅᴀᴢᴀɪ ꜱᴛᴀʀᴛɪɴɢ▪▫▫")
+            time.sleep(0.0)
+            lol.edit_text("ᴅᴀᴢᴀɪ ꜱᴛᴀʀᴛɪɴɢ▪▪▫")
+            time.sleep(0.0)
+            lol.edit_text("ᴅᴀᴢᴀɪ ꜱᴛᴀʀᴛɪɴɢ▪▪▪")
+            time.sleep(0.0)
+            lol.delete()
+            
+            
             update.effective_message.reply_photo(
                 photo=(PM_PHOTO),
                 caption=PM_START_TEXT.format(
@@ -237,7 +258,7 @@ def start(update: Update, context: CallbackContext):
         chat = update.effective_chat.title
         update.effective_message.reply_video(
                 video="https://te.legra.ph/file/a8ed1adace085f9028f24.mp4",
-                caption="𝗜 𝗔𝗠 𝗔𝗟𝗜𝗩𝗘 𝗔𝗡𝗗 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 𝗙𝗜𝗡𝗘.",
+                caption="I'm alive and working fine.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
