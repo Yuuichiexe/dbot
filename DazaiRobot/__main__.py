@@ -72,7 +72,7 @@ buttons = [
                 InlineKeyboardButton(text=" ᴀʙᴏᴜᴛ 🗞️", callback_data="asuka_"),
     ],
     [
-                InlineKeyboardButton(text="⚓ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚓", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                InlineKeyboardButton(text="⚓ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚓", url=f"https://t.me/Dazaiprobot?startgroup=true"),
     ],
 ]
 
