@@ -15,7 +15,7 @@ import DazaiRobot.modules.sql.users_sql as sql
 from DazaiRobot.modules.sudoers import bot_sys_stats as bss
 
 from DazaiRobot import (ALLOW_EXCL, LOGGER,
-                          OWNER_ID, SUPPORT_CHAT, TOKEN, WEBHOOK,
+                          OWNER_ID, SUPPORT_CHAT, TOKEN,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pbot)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
@@ -749,22 +749,8 @@ Dazai is alive!
 
     dispatcher.add_error_handler(error_callback)
 
-    if WEBHOOK:
-        LOGGER.info("Using webhooks.")
-        updater.start_webhook(listen="127.0.0.1", port=PORT, url_path=TOKEN)
-
-        if CERT_PATH:
-            updater.bot.set_webhook(
-                url=URL + TOKEN, certificate=open(CERT_PATH, 'rb'))
-        else:
-            updater.bot.set_webhook(url=URL + TOKEN)
-
-    else:
-        LOGGER.info("Finally Kazuha Is Online")
-        allowed_updates = ['message', 'edited_message', 'callback_query', 'callback_query', 'my_chat_member',
-                           'chat_member', 'chat_join_request', 'channel_post', 'edited_channel_post', 'inline_query']
-        updater.start_polling(
-                timeout=15, read_latency=4, allowed_updates=allowed_updates, drop_pending_updates=True)
+    LOGGER.info("Using long polling")
+    updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
     if len(argv) not in (1, 3, 4):
         telethn.disconnect()
