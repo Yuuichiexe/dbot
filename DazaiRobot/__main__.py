@@ -641,7 +641,7 @@ def get_settings(update: Update, context: CallbackContext):
         send_settings(chat.id, user.id, True)
 
 
-@pgram.on_callback_query(filters.regex("pingCB"))
+@pbot.on_callback_query(filters.regex("pingCB"))
 async def pingCB(_, CallbackQuery):
     uptime = get_readable_time((time.time() - StartTime))
     text = f"Haven't Slept Since {uptime}"
