@@ -14,9 +14,9 @@ from pyrogram import Client, idle, filters
 import DazaiRobot.modules.sql.users_sql as sql
 from DazaiRobot.modules.sudoers import bot_sys_stats as bss
 
-from DazaiRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from DazaiRobot import (ALLOW_EXCL, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
-                          SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pgram, pbot)
+                          SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pbot)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from DazaiRobot.modules import ALL_MODULES
