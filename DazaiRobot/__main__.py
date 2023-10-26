@@ -468,64 +468,60 @@ def get_help(update: Update, context: CallbackContext):
     args = update.effective_message.text.split(None, 1)
 
     # ONLY send help in PM
-    if update.effective_chat.type != update.effective_chat.PRIVATE:
+    if chat.type != chat.PRIVATE:
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
-            first_name = update.effective_user.full_name
-            update.effective_message.reply_photo(
-            random.choice(Asuka_N_IMG), caption= f"Hey {first_name}, Click the Button Below to get help of {module.capitalize()}",
-                parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton(
-                        text="click here",
-                        url="t.me/{}?start=ghelp_{}".format(
-                            context.bot.username, module))
-                ]]))
+            update.effective_message.reply_text(
+                f"Contact me in PM to get help of {module.capitalize()}",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                text="ʜᴇʟᴘ",
+                                url="t.me/{}?start=ghelp_{}".format(
+                                    context.bot.username, module
+                                ),
+                            )
+                        ]
+                    ]
+                ),
+            )
             return
-
-        first_name = update.effective_user.full_name
-        first_nam = update.effective_user.id
-        update.effective_message.reply_photo(
-            random.choice(Asuka_N_IMG), caption= "Hey [{}](tg://user?id={}) Click the Button Below to get the list of possible commands.".format(first_name, first_nam),
-            parse_mode=ParseMode.MARKDOWN,
+        update.effective_message.reply_text(
+            "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup(
                 [
-                  [
-                  InlineKeyboardButton(text="Click here", url="https://t.me/Dazaiprobot?start=help")
-                  ]
+                    [
+                        InlineKeyboardButton(
+                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            url="https://t.me/{}?start=help".format(
+                                context.bot.username
+                            ),
+                        )
+                    ],
                 ]
             ),
         )
         return
 
-    elif len(args) >= 2:
-        if any(args[1].lower() == x for x in HELPABLE):
-            mod = args[1].lower()
-            text = (
-                "Here is the available help for the *{}* module:\n".format(
-                    HELPABLE[mod].__mod_name__
-                )
-                + str(HELPABLE[mod].get_help(chat))
+    elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
+        module = args[1].lower()
+        text = (
+            "Here is the available help for the *{}* module:\n".format(
+                HELPABLE[module].__mod_name__
             )
-            xx = HELPABLE[mod].get_help(chat)
-            if isinstance(xx, list):
-                txt = str(xx[0])
-                kb = [xx[1], [InlineKeyboardButton(text="Back", callback_data="help_back")]]
-            else:
-                txt = str(xx)
-                kb = [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
-            send_help(
-                update.effective_chat.id,
-                txt,
-                InlineKeyboardMarkup(kb),
-            )
-        else:
-            update.effective_message.reply_text(
-                f"<code>{args[1].lower()}</code> is not a module",
-                parse_mode=ParseMode.HTML,
-            )
+            + HELPABLE[module].__help__
+        )
+        send_help(
+            chat.id,
+            text,
+            InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="BACK", callback_data="help_back")]]
+            ),
+        )
+
     else:
-        send_help(update.effective_chat.id, HELP_STRINGS.format(update.effective_user.first_name, update.effective_user.id))
+        send_help(chat.id, HELP_STRINGS)
 
 
 def send_settings(chat_id, user_id, user=False):
