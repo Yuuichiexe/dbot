@@ -1,20 +1,21 @@
+import DazaiRobot.modules.sql.blacklistusers_sql as sql
+from DazaiRobot import ALLOW_EXCL
+from DazaiRobot import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
+
+from telegram import Update
+from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters
 from pyrate_limiter import (
     BucketFullException,
     Duration,
+    RequestRate,
     Limiter,
     MemoryListBucket,
-    RequestRate,
 )
-from telegram import Update
-from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
-
-import DazaiRobot.modules.sql.blacklistusers_sql as sql
-from DazaiRobot import ALLOW_EXCL, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES
 
 if ALLOW_EXCL:
     CMD_STARTERS = ("/", "!")
 else:
-    CMD_STARTERS = "/"
+    CMD_STARTERS = ("/",)
 
 
 class AntiSpam:
@@ -84,10 +85,11 @@ class CustomCommandHandler(CommandHandler):
                 if len(fst_word) > 1 and any(
                     fst_word.startswith(start) for start in CMD_STARTERS
                 ):
+
                     args = message.text.split()[1:]
                     command = fst_word[1:].split("@")
                     command.append(message.bot.username)
-                    if user_id == 1087968824:
+                    if user_id == 1099219137:
                         user_id = update.effective_chat.id
                     if not (
                         command[0].lower() in self.command
