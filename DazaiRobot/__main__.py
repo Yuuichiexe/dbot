@@ -12,8 +12,6 @@ from typing import Optional
 from pyrogram import Client, idle, filters
 
 import DazaiRobot.modules.sql.users_sql as sql
-from DazaiRobot.modules.sudoers import bot_sys_stats as bss
-
 from DazaiRobot import (ALLOW_EXCL, LOGGER,
                           OWNER_ID, SUPPORT_CHAT, TOKEN,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pbot)
